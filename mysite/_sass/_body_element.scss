@@ -1,8 +1,8 @@
 
 @import "default_colors";
 
-$body-background: $cod-grey;
-$body-foreground: $gallery;
+$body-background: $cod-grey !default;
+$body-foreground: $gallery !default;
 
 body {
   margin: 0;
