@@ -18,21 +18,52 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Kelle Clark, Exploring Computer Science and Mathematics
+email: clarkke20@students.ecu.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  A journey, complete with unexpected side-trips, into topics in 
+  Computer Science and Mathematics that I find interesting.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: kclarkcode
+github_username:  KelleClark
 
 # Build settings
+markdown: kramdown
 theme: null
 plugins:
   - jekyll-feed
+
+# Letting Jekyll know where to find the landing page
+# similar to $PATH it is an array of directories that 
+# Jekyll should search
+include: [_pages, _posts]
+
+# Working with YAML metadata and defining variables for 
+# the basic "types" of layouts used
+defaults:
+  -
+    scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+      url: /blog/:title
+      permalink: /blog/:title/
+     
+  -
+    scope:
+      type: pages
+      path: _pages
+    values:
+      is_post: false
+      layout: default
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
