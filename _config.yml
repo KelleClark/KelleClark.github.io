@@ -23,8 +23,10 @@ email: clarkke20@students.ecu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   A journey, complete with unexpected side-trips, into topics in 
   Computer Science and Mathematics that I find interesting.
+<<<<<<< HEAD
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
 twitter_username: kclarkcode
 github_username:  KelleClark
 
