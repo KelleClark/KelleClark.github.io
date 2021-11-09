@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Kelle Clark, Exploring Computer Science and Mathematics
+title: kelleclark$ cd Exploring_CS_and_Math
 email: clarkke20@students.ecu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   A journey, complete with unexpected side-trips, into topics in 
@@ -27,8 +27,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-twitter_username: kclarkcode
-github_username:  KelleClark
+social_links:
+  twitter_username: kclarkcode
+  github_username:  KelleClark
+  linkedIn_username: kelle-clark-b31731176
 
 # Build settings
 markdown: kramdown
@@ -51,8 +53,8 @@ defaults:
     values:
       is_post: true
       layout: post
-      url: /blog/:title
-      permalink: /blog/:title/
+      url: /tie/:title
+      permalink: /tie/:title/
      
   -
     scope:

@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
-</head>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+</html>
+
+{% include head.html %}
+
 
 <body>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
-            <li><a href="/about" {% if page.title=="About" %}class="active-page" {% endif %}>About</a></li>
-            <li><a href="/blog" {% if page.title=="Blog" %}class="active-page" {% endif %}>Blog</a></li>
-            <li><a href="/contact" {% if page.title=="Contact" %}class="active-page" {% endif %}>Contact</a></li>
-        </ul>
-    </nav>
+    {% include header.html %}
+
     <main class="page-content">
-        {{ content }}
+        <div class="wrapper">
+            {{ content }}
+        </div>
     </main>
-    <footer>
-        Proudly made with Jekyll
-    </footer>
+
+    {% include footer.html %}
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/bootstrap.js"></script>
 
 </html>

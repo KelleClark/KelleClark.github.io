@@ -1,4 +1,28 @@
-@import 'body_element',
-        'default_colors',
-        'header_element',
-        'rouge-base16-dark';
+
+
+
+
+@import
+  "bootstrap/bootstrap",
+  "bootstrap/base",
+  "bootstrap/layout",
+  "bootstrap/syntax-highlighting"
+;
+
+@import "default_colors";
+@import "body_element";
+@import "header_element";
+@import "index_card";
+
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: $conifer;
+
+  &:hover {
+    color: $hippie-blue;
+  }
+}
+
+
+            
