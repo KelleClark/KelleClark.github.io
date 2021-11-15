@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+</html>
+
+{% include head.html %}
+
+
+<body>
+    {% include header.html %}
+
+    <div class="container-fluid" id="top_container">
+        <div class="row">
+            {% include announcement.html %}
+        </div>
+
+        <div class="row">
+            {% include welcome_row.html %}
+        </div>
+
+        <div class="row">
+            <div class="container-fluid">
+                <div id="spacer1">
+                    <hr style="margin-bottom: 30px; margin-top: 40px; color: palevioletred">
+                </div>
+            </div>
+        </div>
+
+        <div class=row>
+            {% include contact_row.html %}
+        </div>
+
+        <div class=row>
+
+            {% include slide_show.html %}
+        </div>
+    </div>
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/bootstrap.js"></script>
+
+</html>

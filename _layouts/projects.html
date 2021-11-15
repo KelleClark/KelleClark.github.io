@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="home">
+    {% if page.title %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {% endif %}
+
+    {{ content }}
+
+
+
+    <h2 class="post-list-heading">{{ page.list_title }}</h2>
+
+    <ul class="post-list">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {% for item in site.data.projects %}
+        <li>
+            <h3>
+                <a class="post-link" href="{{ item.link}}">{{item.name}}</a>
+            </h3>
+            {% if site.show_excerpts %}
+            <p>
+                {{ item.excerpt }}
+            </p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>

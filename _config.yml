@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: kelleclark$ cd Exploring_CS_and_Math
+title: kelleclark/Exploring_CS_and_Math
 email: clarkke20@students.ecu.edu
 description: >- # this means to ignore newlines until "baseurl:"
   A journey, complete with unexpected side-trips, into topics in 
@@ -26,6 +26,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %d, %Y"
 
 social_links:
   twitter_username: kclarkcode
@@ -41,7 +48,7 @@ plugins:
 # Letting Jekyll know where to find the landing page
 # similar to $PATH it is an array of directories that 
 # Jekyll should search
-include: [_pages, _posts]
+include: [_pages, _posts, _projects]
 
 # Working with YAML metadata and defining variables for 
 # the basic "types" of layouts used
@@ -55,7 +62,17 @@ defaults:
       layout: post
       url: /tie/:title
       permalink: /tie/:title/
-     
+
+  -
+    scope:
+      type: projects
+      path: _projects
+    values:
+      is_project: true
+      layout: repos
+      url: /projects/:title
+      permalink: /projects/:title/
+
   -
     scope:
       type: pages
