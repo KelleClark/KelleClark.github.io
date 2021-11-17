@@ -28,7 +28,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                             {% for item in site.data.navbar %}
                             <li class="nav-item">
-                                <a {% if url==item.link %}class="current" {% else %}class="nav-link" {% endif %}
+                                <a {%if url==item.link %}class="nav-link active" {%else %} class="nav-link" {%endif%}
                                     href="{{ item.link }}">
                                     {{ item.name }}
                                 </a>

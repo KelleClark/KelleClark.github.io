@@ -1,6 +1,6 @@
 @import "default_colors";
 
-.welcome_card {
+.welcome_div {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,8 @@
     background-color: black;
     background-clip: border-box;
     text-align: left;
-    color: white;
+    color: silver;
     // border: $card-border-width dotted $conifer;
-    @include border-radius($card-border-radius);
+    //@include border-radius($card-border-radius);
     @include box-shadow($card-box-shadow);
 }

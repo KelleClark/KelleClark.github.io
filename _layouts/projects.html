@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default1
 ---
 
 <div class="home">
@@ -13,26 +13,29 @@ layout: default
 
     <h2 class="post-list-heading">{{ page.list_title }}</h2>
 
-    <ul class="post-list">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {% for item in site.data.projects %}
-        <li>
-            <h3>
-                <a class="post-link" href="{{ item.link}}">{{item.name}}</a>
-            </h3>
-            {% if site.show_excerpts %}
-            <p>
-                {{ item.excerpt }}
-            </p>
-            {% endif %}
-        </li>
-        {% endfor %}
-    </ul>
+
+
+    {% for item in site.data.projects %}
+    <div class="card">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-header" style="background-color:peru;">
+            <br>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue;">{{item.title}}</h5>
+            <p class="card-text">{{item.description}}</p>
+            <a href="{{ item.link}}" class="btn btn-dark">View Project</a>
+        </div>
+    </div>
+    <div>
+        <br>
+    </div>
+    {% endfor %}
 </div>
 
 <div class="container-fluid">
     <div class="row">
-
+        <hr style="width: 2px; color: brown;">
         {% include slide_show.html %}
     </div>
 </div>

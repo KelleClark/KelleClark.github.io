@@ -1,7 +1,11 @@
-- name: NLP/ngram_language_models
+- title: NLP/ngram_language_models
   link: https://github.com/KelleClark/CSCI6040Project1/blob/master/README.md
-  excerpt: "In this project, we take the relative frequencies of various
-   ngram distributions found in a training corpus then use linear and Laplacian
-   smooting to build language models in order to predict the next word(s) for given
-   input into the model. This work is done in a ipynb file without making minimal use of
-   nltk."
+  description: "In this project, relative frequencies of
+   ngrams (unigrams/bigrams/trigrams) are found in a training corpus. To fill in missing tokens (words) in 
+   the distribution, the language models are smoothed using linear and Laplacian methods. 
+   Given an input text, the model is used to predict the next word(s). This project uses an ipynb
+    file making minimal use of nltk library."
+- title: Blockchain Databases and Elliptic Curve Cryptography
+  link: https://docs.google.com/presentation/d/1S-8jVbpC_DShYWHXtDc4YDbb9toLLQEx/edit?usp=sharing&ouid=112123308449334229811&rtpof=true&sd=true
+  description: "A brief overview of Blockchains used in Distributed Ledger Technology"
+  video: https://drive.google.com/file/d/1Jyr0aIz2Hk0nU7-WI_87akojjq5WWX6E/view?usp=sharing

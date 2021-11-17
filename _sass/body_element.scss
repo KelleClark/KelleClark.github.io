@@ -13,10 +13,12 @@ body {
   );
   height: 100vh;
   // background: $body-background url("../images/bkg.png") 0 0;
-  color: $body-foreground;
-  font-size: 20px;
+  //color: $body-foreground;
+  color: silver;
+  font-size: 24px;
   line-height: 1.5;
-  font-family: Inconsolata, monospace;
+  font-family: 'Arial Narrow', sans-serif;
+  //font-family: Inconsolata, monospace;
   // font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 

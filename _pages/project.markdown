@@ -1,5 +1,5 @@
 ---
 layout: projects
-title: GitHub Projects
+title: Projects and Resources
 permalink: /projects/
 ---

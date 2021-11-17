@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+</html>
+
+<head>
+    {% include head.html %}
+    <style>
+        header {
+            background-color: navajowhite;
+            width: 100%;
+            padding: 20px 0;
+            margin: 0 0 0px 0;
+        }
+
+        header h1:before {
+            content: "  ";
+            font-size: 30px;
+        }
+
+        header h2 {
+            font-size: 18px;
+            font-weight: 300;
+            color: black;
+        }
+
+        header nav-link {
+            color: black;
+            font-size: 16px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 0 0 0 -40px;
+            font-weight: bold;
+            font-family: 'Arial Narrow', sans-serif;
+            color: black;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+                0 0 5px rgba(181, 232, 83, 0.1),
+                0 0 10px rgba(181, 232, 83, 0.1);
+            letter-spacing: -1px;
+            -webkit-font-smoothing: antialiased;
+
+            @include media-max-width($container-max-width) {
+                margin-left: 0;
+            }
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: antiquewhite;
+            /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
+            height: 100vh;
+            color: black;
+            font-size: 24px;
+            line-height: 1.5;
+            font-family: 'Arial Narrow', sans-serif;
+            /* font-family: Inconsolata, monospace;
+            font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: black;
+
+        }
+
+
+        .navbar-brand h1 {
+            align-items: center;
+        }
+
+
+        a-href {
+            color: white;
+        }
+
+        a-href-hover {
+            color: darkblue;
+        }
+
+        a {
+            color: green;
+        }
+
+        a-hover {
+            color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    {% include header.html %}
+    <div class="container-fluid" style="background-color: antiquewhite; width:100%; height:300px;">
+        <img style="object-fit: cover; width:100%; height:100%" src="../assets/images/boardwalk_birds.jpg">
+    </div>
+
+    </div>
+    <main class="page-content" style="background-color: antiquewhite;">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+
+        <div class="container-fluid" style="background-color: antiquewhite;">
+            {% include footer.html %}
+        </div>
+    </main>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/bootstrap.js"></script>
+
+</html>
