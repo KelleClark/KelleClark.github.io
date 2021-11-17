@@ -4,13 +4,13 @@
         top: -4.3px;
     }
 </style>
-<header class="site-header" role="banner">
+<header role="banner">
     <div>
 
         <div class="wrapper" style="padding: 0px;">
             {% assign default_paths = site.pages | map: "path" %}
             {% assign page_paths = site.header_pages | default:default_paths %}
-            <nav class="navbar navbar-light navbar-expand-md ">
+            <nav class="navbar navbar-dark navbar-expand-md ">
                 <div class="container-fluid p-0">
                     <a class="navbar-brand" href="/">
 
@@ -24,18 +24,16 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-
+                        {% assign url = page.url|remove:{{site.url}} %}
                         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                            {% for item in site.data.navbar %}
                             <li class="nav-item">
-                                <a class='nav-link' href="/tie">
-                                    TIE
+                                <a {% if url==item.link %}class="current" {% else %}class="nav-link" {% endif %}
+                                    href="{{ item.link }}">
+                                    {{ item.name }}
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class='nav-link' href="/documents/KelleClark.pdf">
-                                    Resume
-                                </a>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

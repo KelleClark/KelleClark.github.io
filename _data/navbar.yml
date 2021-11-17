@@ -1,7 +1,6 @@
-
+- name: TIE
+  link: /tie/
+- name: Resume
+  link: /documents/KelleClark.pdf
 - name: Projects
-  link: /projects
-- name: TIL
-  link: /til
-- name: Contact
-  link: /contact
+  link: /projects/

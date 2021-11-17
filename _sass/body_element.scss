@@ -1,0 +1,23 @@
+
+@import "default_colors";
+
+$body-background: $cod-grey !default;
+$body-foreground: $gallery !default;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(0, 150, 0, 0.75), black 120%
+  );
+  height: 100vh;
+  // background: $body-background url("../images/bkg.png") 0 0;
+  color: $body-foreground;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: Inconsolata, monospace;
+  // font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+

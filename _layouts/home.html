@@ -10,7 +10,10 @@
 <body>
     {% include header.html %}
 
-    <div class="container-fluid" id="top_container">
+    <div class="container-fluid" id="first_terminal">
+        <div style="background-image:url(../assets/images/bkg.png);">
+            <br>
+        </div>
         <div class="row">
             {% include announcement.html %}
         </div>
@@ -18,18 +21,23 @@
         <div class="row">
             {% include welcome_row.html %}
         </div>
+    </div>
 
+    <div>
+        <br>
+    </div>
 
-
+    <div class="container-fluid" style="margin-top: -60px" id="second_terminal">
+        <div style="background-image:url(../assets/images/bkg.png);">
+            <br>
+        </div>
         <div class=row>
             {% include contact_row.html %}
         </div>
 
-        <div class=row>
-
-            {% include slide_show.html %}
-        </div>
     </div>
+    </div>
+
 
 
 

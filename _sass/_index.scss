@@ -10,10 +10,14 @@
 @import "header_element";
 @import "index_card";
 @import "posts";
+@import "announcement";
+@import "welcome";
+@import "contact";
+
 
 // custom for this site
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
   color: $conifer;
 
   &:hover {
@@ -29,13 +33,13 @@
   }
 }
 
-// Style anchor elements.
 
 $link-color:                              $conifer !default;
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
+$carousel-control-color:                  $condifer !default;
 
 a-href {
   color: $conifer;
@@ -70,22 +74,30 @@ a-href  {
   }
 }
 
-#top_container {
-  /* The image used */
-  background-image: url("../images/dragonfly_xor_yellow2.png");
+.current {
+  color: $hippie-blue;
+}
 
+#first_terminal {
+  /* The image used */
+  // background-image: url("../images/dragonfly_xor_yellow2.png");
+  // background-color: white;
   /* Full height */
   height: 100%; 
-  width: 100%;
-
+  width: 80%;
+  position: static;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  text-align: right;
-   color: black;
 }
+
+#second_terminal {
+  width: 50%;
+  background-position: right;
+  position: relative;
+}
+
 
 
             
