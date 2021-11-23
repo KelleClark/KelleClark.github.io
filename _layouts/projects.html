@@ -1,0 +1,41 @@
+---
+layout: default1
+---
+
+<div class="home">
+    {% if page.title %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {% endif %}
+
+    {{ content }}
+
+
+
+    <h2 class="post-list-heading">{{ page.list_title }}</h2>
+
+
+
+    {% for item in site.data.projects %}
+    <div class="card">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-header" style="background-color:#284253;">
+            <br>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="color:#284253;">{{item.title}}</h5>
+            <p class="card-text">{{item.description}}</p>
+            <a href="{{ item.link}}" class="btn btn-dark">View Project</a>
+        </div>
+    </div>
+    <div>
+        <br>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <hr style="width: 2px; color: brown;">
+        {% include slide_show.html %}
+    </div>
+</div>

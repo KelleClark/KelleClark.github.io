@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Kelle Clark</title>
+    <!-- <link rel="stylesheet" type="text/css" href=" /assets/styles/main.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        header {
+            background-color: #bfa881;
+            width: 100%;
+            padding: 20px 0;
+            margin: 0 0 0px 0;
+            color: black;
+        }
+
+        header h1:before {
+            content: "  ";
+            font-size: 30px;
+        }
+
+        header h2 {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        header nav-link {
+            color: black;
+            font-size: 16px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 0 0 0 40px;
+            font-weight: bold;
+            font-family: 'Arial Narrow', sans-serif;
+            color: black;
+
+            letter-spacing: -1px;
+            -webkit-font-smoothing: antialiased;
+
+            @include media-max-width($container-max-width) {
+                margin-left: 0;
+            }
+        }
+
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff0d6;
+            /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
+            height: 100vh;
+            color: black;
+            font-size: 24px;
+            line-height: 1.5;
+            font-family: 'Arial Narrow', sans-serif;
+            /* font-family: Inconsolata, monospace;
+            font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: black;
+
+        }
+
+        .navbar-brand h1 {
+            align-items: center;
+        }
+
+
+        a {
+            color: #465368;
+        }
+
+        a-hover {
+            color: #465390;
+        }
+
+        a-href-hover {
+            color: #accaff;
+            ;
+        }
+
+
+        .content {
+            background-color: #fff0d6;
+            width: 100%;
+            display: flex;
+            padding: 40%;
+        }
+
+
+
+        #sidebar {
+            min-width: 150px;
+            position: fixed;
+            left: 0;
+            height: 100vh;
+            z-index: 999;
+            max-width: 250px;
+            min-height: 100vh;
+            background-color: #bfa881;
+        }
+
+        #sidebar.active {
+            margin-left: -250px;
+        }
+
+
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #bfa881;
+        }
+
+        #dismiss {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            /* top right corner of the sidebar */
+            top: 10px;
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="sidebar-header">
+            <h3>Kelle Clark</h3>
+        </div>
+        <hr>
+        <ul class="list-unstyled components">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tie/" class="active">TIE</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/documents/KelleClark.pdf">Resume</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid" style="background-color:#284253;">
+                <button type=" button" id="sidebarCollapse" class="btn btn-info" style="background-color: #bfa881;">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
+
+            </div>
+            <div class="container-fluid" style="background-color: #fff0d6; width:100%; height:500px;">
+                <img style="width: 100%; height:100%; object-fit: cover; " src="../assets/images/lightbulb2.png">
+            </div>
+
+        </nav>
+
+        <div>
+            <style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+  <h1>404</h1>
+
+  <p><strong>Page not found :(</strong></p>
+  <p>The requested page could not be found.</p>
+</div>
+
+        </div>
+
+        <div>
+            <footer class="site-footer h-card">
+    <data class="u-url" href="/"></data>
+    <div class="wrapper p-0">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="social-links">
+                        
+
+<ul class="social-media-list">
+    <div style="display:inline;">
+        <a href="https://twitter.com/KClarkCode" target="_blank"><img src="/assets/images/social/tw.png" width="30px"
+                hspace="15"></a>
+        <a href="https://www.linkedin.com/in/kelle-clark-b31731176/" target="_blank"><img
+                src="/assets/images/social/li.png" width="30px" hspace="15"></a>
+    </div>
+</ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+        </div>
+    </div>
+
+
+
+
+</body>
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            // hide sidebar
+            $('#sidebar').toggleClass('active');
+        });
+
+    });
+</script>
+
+</html>

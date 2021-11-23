@@ -1,0 +1,21 @@
+- title: NLP/ngram_language_models
+  link: https://github.com/KelleClark/CSCI6040Project1/blob/master/README.md
+  description: "In this project, relative frequencies of
+   ngrams (unigrams/bigrams/trigrams) are found in a training corpus. To fill in missing tokens (words) in 
+   the distribution, the language models are smoothed using linear and Laplacian methods. 
+   Given an input text, the model is used to predict the next word(s). This project uses an ipynb
+    file making minimal use of nltk library."
+- title: Blockchain Databases and Elliptic Curve Cryptography
+  link: https://docs.google.com/presentation/d/1S-8jVbpC_DShYWHXtDc4YDbb9toLLQEx/edit?usp=sharing&ouid=112123308449334229811&rtpof=true&sd=true
+  description: "A brief overview of Blockchains used in Distributed Ledger Technology"
+  video: https://drive.google.com/file/d/1Jyr0aIz2Hk0nU7-WI_87akojjq5WWX6E/view?usp=sharing
+- title: ASP.NET web app with SQL database
+  link: https://drive.google.com/file/d/1mvtV-AIOd4PECPYQDIZFodOW_OkVmg_r/view?usp=sharing
+  description: "This project demonstrates the Software Development Life Cycle, SDLC, as our team used 
+  Visual Studios 2019 to build a C# ASP.NET web application with a SQL database. I enjoyed taking the
+  lead in creating the use case/activity/sequence/class diagrams using 
+  Papyrus for the UML within Eclipse Mars, and I learned a lot from my team about the framework and
+  and database. While our team selected the Model-View-Controller Architecture to use for the PeerEd package, 
+  by using the ASP.NET project, the solution incorporates both the model and controller  a
+  service that could be used to search for and get user made educational videos for primary and secondary school.
+  Our team envisioned the platform to be a educational version of YouTube."

@@ -1,0 +1,88 @@
+Computer Communication and Networks Research Project, Group Project
+Course and Term: ITCS 6166, Summer 2019
+
+Assignment Project Report: Survey of Bluetooth-based Wireless Sensor Networks and Their Applications
+
+Description: : Other Links: Group presentation ppt slides
+
+Software Implementation Using Information Extraction and Retrieval Techniques, Group Project
+Course and Term: CSCI 6030, Spring 2020
+
+Assignment Project Report: NISSE (Nutritional Information Scanner Search Engine) SDLC Documentation
+
+Description: This project required the team of five to document their progress through all stages of the Software Development and to deliver a web application that focused on using information extraction and retrieval techniques. The aim of this document is discuss how the different components necessary for a basic search system are integrated in Team Two’s NISSE (Nutritional Ingredient Scan/Search Engine) project and to synthesize the team’s understanding of an overall information retrieval system from the perspective of a subject-specific corpus--Food Database APIs by Edamam.  The team revisits the functional requirements outlined in the week three report, outlines their implementation of a mobile-friendly user interface and search functions (UPC search and term search), discuss the setup of cloud hosting and storage via Firebase. New features implemented also include enhanced interaction between View and Controller, and a user login/sign-up feature that enable users to review saved favorite searches, delete saved searches, and voluntarily provide feedback on any given ingredient or individual product. 
+
+Other Links: Nisse Application hosted on heokuapp.com. video of group presentation
+
+Survey of Current Natural Language Processing Models, Group Project
+Course and Term: CSCI 6040, Spring 2020
+
+Assignment Project Report: NLP model Research (Bert and RoBerta), Group Report
+
+Description:  In this project the team of three wrote a literary review of articles addressing at least one influential Natural Language Processing Model.  The team focused on two open-source Natural Language Processing models: BERT and RoBERTa. BERT is the predecessor to RoBERTa, and both are generatively pre-trained on large and diverse collections. Researchers from Google AI published the details for their language representation model BERT in 2018 and revealed that, with minimal task-specific fine-tuning to the recursive neural network training architecture, BERT had significantly better accuracy compared to the benchmarks set by state-of-the-art NLP systems. Thanks to the open-source release of BERT, researchers Liu et al at Facebook were able to identify ways to improve upon the robustness of BERT and thus built RoBERTa. The sections outline of the history of natural language processing models, highlight the features of BERT and RoBERTa that have become the building blocks of many applications and conclude with a specific focus on recent advances in the field.
+
+Other Links: the read me for IPNB Project using the Python Libraries like  nltk, pandas, numpy.  the GitHub (private) repo with code but not well organized can be shared at KelleClark/CSCI6040Project1
+
+Design and Implement a Project Using Data Mining Techniques, Individual Project
+Course and Term: CSCI 6840, Spring 2020
+
+Assignment Project Report: Knowledge Discovery from Data as a Tool for Determining Successful Placement of Students in Their First College Math Course
+
+Description: As I currently work in education, I selected for my individual data mining project data information that was relevant to me and my employer  It is crucial to the success of a first-year college student that they are provided with the best guidance in course selection. Wingate University has dedicated a lot of effort in creating a Math Placement Test under the direction of Dr. Lauer, Dr. Joyner and Dr. Bell of the Wingate Math Department. The math faculty use the results of a student’s Wingate Math Placement Test, along with other data, to recommend a list of math courses suitable for the student’s skill level. The results presented can be used in measuring the effectiveness of this advising process highlighting the methods of data mining in classification of students and identifying potential patterns in the data that were not yet detected. 
+
+Other Links: Applications of Data Mining in Intrusion Detection Systems (a mini talk presentation of a research topic)
+
+Apply Various Machine Learning Models Presented and Provide Metrics for Performance of these Models, Group Project
+Course and Term: CSCI 6020, Summer 2020
+
+Assignment Project Report: A Predictive Analytic Solution to Help Address Math Placement for Incoming Wingate University Students.
+
+Description: The Machine Learning course offered a chance for me to strengthen my understanding of the concepts introduced to me in CSCI 6840: normalizing data, calculating (Shannon information) entropy and remaining entropy to identify principal components involved in classifying tuples of values against a target variable's value with the Naive Bayesian and Bayesian Network Models.  The treatment of these concepts was more thorough in this course (by design), but the constraints of a short summer semester limited the depth of coverage.  While the probability-based models required me to strengthen my "statistics/probability" skills, I truly enjoyed working with the error-based methods like the the iterations within the logistic regression model employing the greatest gradient descent because of the overlap with linear algebra and multivariable calculus.  This is the course where I first started feeling confident to "play on my own" programming in python and attempting coding in r to realize the concepts learned.
+
+Other Links:
+
+Analysis of Run Times for Comparison Based Sorting Algorithms, Individual Project
+Course and Term: ITCS 6114, Summer 2020
+
+Assignment Project Report: The Implementation of Five Sorting Algorithms and Analysis of Performance
+
+Description: Using Java to generate of random arrays, I tested the performance of  InsertSort, MergeSort, HeapSort, QuickSort, MedQuickSort.  Each study consisted of 30 trials where every algorithm was tested on 10 random arrays of increasing size n, the same 10 arrays in sorted ascending and in descending order. The studies were replicated and data as aggregated and presented to analyze performance of the algorithms given the programmer's same skill level and within the same coding environment. In the analysis of the collected, I chose to use Python as the pandas and myplotlib library allowed me to easily visualize the data.  I then visually compared the fitting of quadratic, linear and nlog(n) models to the scatterplots of size n versus computation time for methods given random, sorted in Ascending or sorted in Descending condition of the input arrays.
+
+Other Links: The Google Drive with readme.txt and programs
+
+Design and Implement an Application Featuring Software Engineering Concepts, Group Project
+Course and Term: SENG 6230, Fall 2020
+
+Assignment Project Report: SDLC Documentation for PeerEd, A Software Package with Functions for Educational Videos
+
+Description: This project focus on addressing the need for a free online resource that supports young people to learn independently in a modality that is familiar to them. Most young people, school age, average at least 20 hours of screen time per week. Traditional methods of in-class learning are giving way to more video based content with checks for understanding. Young people also enjoy making videos and posting these to social media sites such as Tik-Tok and YouTube. The PeerEd system ties together the need for young people to learn with their love of watching and making short (less than 5 min) videos that target concepts that are included in most K- 12 Curriculums. 
+
+Other Links: There are 3 really good videos that we made to help with "onboarding" for working with this project found here: https://drive.google.com/drive/folders/1TPyUOIbO1sCybmdJ7yABUmsb3nyAruhy?usp=sharing
+and a private GitHub repo containing the code to run the application locally https://github.com/KelleClark/copiedSENG_6230_Group3 
+
+Topic Authoring: Computer Vision Content, Individual Research Project
+Course and Term: CSCI 6050, Fall 2020
+
+Assignment Project Report: Underwater Optical Imaging (UOI)
+
+Description: Underwater optical imaging (UOI) is an area of research within the scope of computer vision. As a true interdisciplinary field, advances in UOI involve contributions from researchers in various disciplines: computer science, electrical engineering, oceanography and physics. The goal of this paper is to introduce the reader to concepts integral in a physical-based software approach to color correct a single underwater image where this distortion is attributed to the attenuation of red, blue and green wavelengths in water and the scattering of light from natural and artificial pollutants of the medium. The sections are modular, in that the reader should be able to read the sections in any order without dependency of understanding. e information of all the sections presents a cohesive introduction to UOI color restoration techniques.
+
+Other Links: During the semester, there were five mini coding projects done with team members using Python and OpenCV. I have migrated copies of the repos from the  ChlicoatClarkHeath GitLab to my GitHub.  Here are two of the ReadMe files as an example of the assignments: Readme_Image_Registration and Readme_Lomographic_Filters  The GitHub for the packages is https://github.com/KelleClark?tab=repositories
+
+Database Design and Implementation, Group Project
+Course and Term: CSCI 6600, Spring 2021
+
+Assignment Project Report: Clik: A Social Media Web App using a Neo4j Database and the GitHub: https://github.com/KelleClark/database_project
+
+Description: This web application uses the Neo4j as the database hosted and served locally and a user interface allowing a user to create a visualization of friends and events with relationships between them.  The user can "post" and "get" using drop-down menus and checkboxes to manage the database and request different views.  Queries are made in the backend using Cipher query language.  
+
+Other Links: An overview of a blockchain, a distributed, decentralized digital ledger technology with an emphasis on the elliptic curve algorithm used to encrypt "mine" blocks holding transactions and the previous block's hash. Blockchains and Elliptic Curve Cryptography
+
+Is My Classmate a Vampire?, Group Project
+Course and Term: CSCI 6710, Spring 2021
+
+Assignment Project Report: HW4 Iz My Mate A Vampire, A Web Application for the GitHub and the site http://myweb.ecu.edu/student/clarkke20/index.html
+
+Description:  This project was divided into three parts. The first part of this assignment is to create a video that demonstrates the use of the paper prototype approach in exploring the functionality of the proposed system. The link for this video is https://www.youtube.com/watch?v=nwoGWN0l4v0&feature=youtu.be The team used the use case of a user that has an account with the system and wants to add a new classmate’s features to the collection to determine if that classmate is a vampire and then to view the results of the results with more than one view filter. The second part of this assignment requires the team to perform an initial requirements analysis for the system including both non-functional and functional requirements. These requirements are to be categorized as belonging to either the Model, the View or the Controller in the context of MVC architecture for a system. Each component is to have at least four non-functional requirements and there should be at least four functional requirements. In order to better understand the possible requirements for the system, the team first describes the users of the system and possible use cases in Sections 1 and 2. Sections 3 and 4 of this document list the Functional and Nonfunctional requirements for IsMyClassmateVampire. The team then used an iterative development process in the building of the application using HTLM, Bootstrap, js and jQuery.
+
+Other Links: Final Group Project: NEXTFIX, A Show Recommender Web Application to help a user find their next binge on NetFlix

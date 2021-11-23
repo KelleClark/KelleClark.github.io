@@ -1,0 +1,103 @@
+@import
+  "bootstrap/bootstrap",
+  "bootstrap/base",
+  "bootstrap/layout",
+  "bootstrap/syntax-highlighting"
+;
+
+@import "default_colors";
+@import "body_element";
+@import "header_element";
+@import "index_card";
+@import "posts";
+@import "announcement";
+@import "welcome";
+@import "contact";
+
+
+// custom for this site
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $conifer;
+
+  &:hover {
+    color: #0062FF ;
+  }
+}
+
+.navbar-brand h1 {
+  align-items: center;
+
+  &:hover {
+    color: #0062FF ;
+  }
+}
+
+
+$link-color:                              $conifer !default;
+$link-decoration:                         underline !default;
+$link-shade-percentage:                   20% !default;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:                   null !default;
+$carousel-control-color:                  $condifer !default;
+
+a-href {
+  color: $conifer;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+// And undo these styles for placeholder links/named anchors (without href).
+// It would be more straightforward to just use a[href] in previous block, but that
+// causes specificity issues in many other styles that are too complex to fix.
+// See https://github.com/twbs/bootstrap/issues/19402
+
+a-href  {
+  color: $conifer;
+  &:hover {
+    color: #0062FF ;
+    text-decoration: none;
+  }
+}
+
+.current {
+  color: $hippie-blue;
+}
+
+#first_terminal {
+  /* The image used */
+  // background-image: url("../images/dragonfly_xor_yellow2.png");
+  // background-color: white;
+  /* Full height */
+  height: 100%; 
+  width: 80%;
+  position: static;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#second_terminal {
+  width: 65%;
+  background-position: right;
+  position: relative;
+}
+
+
+
+            

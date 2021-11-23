@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="">
+
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> - Kelle Clark</title>
+<link rel="stylesheet" type="text/css" href=" /assets/styles/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        .dot {
+            height: 25px;
+            width: 25px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        #second_terminal {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <style media="screen">
+    img {
+        position: relative;
+        top: -4.3px;
+    }
+</style>
+<header role="banner">
+    <div>
+        <div class="wrapper" style="padding: 0px;">
+            
+            
+            <nav class="navbar navbar-dark navbar-expand-md ">
+                <a class="navbar-brand mr-auto" href="/">
+
+                    <h1> Kelle Clark </h1>
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/tie/">
+                                TIE
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/documents/KelleClark.pdf">
+                                Resume
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/projects/">
+                                Projects
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <div class="container-fluid" id="first_terminal">
+
+        <div style="background-image:url(../assets/images/bkg.png);">
+            <span class="dot"></span>
+            <a onclick="toggle_terminal()"><span class="dot" style="background-color: yellow; id="
+                    minimize_terminal"></span></a>
+            <a href="/projects/"><span class="dot" style="background-color: green; id=" expand_terminal"></span></a>
+        </div>
+        <div class="row">
+            <div class="container-fluid">
+    <div id="bannertext">
+        <div class="text-middle container-fluid announce_div">
+            <div style="text-indent:5%;">
+                <p id=" bannertext">
+                    >>$ Checkout my <a style="color#b5e853;" href='/tie/'>TIE section</a> (Today I Explored):<br>
+                    Posts outlining the topics in Computer Science and/or Mathematics that I have focused on.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid">
+    <div class="text-middle container-fluid  welcome_div">
+        <h2 style="text-align: center; color:#b5e853;">Welcome!</h2>
+        <div style="text-indent:5%;">
+            <p> My name is Kelle Clark, and I am a Mathematics and
+                Computer Science
+                enthusiast. This site allows me to journal my exploration into these fields, catelog great resources
+                and share my ideas with others.
+            </p>
+            <p> Navigate to either my <a href="/tie">TIE</a> (Today I Explored) blog-like page or visit the
+                Projects page to view samples of my work.
+            </p>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+</div>
+        </div>
+        <div class=row>
+            <div class="container-fluid">
+    <div class="text-middle container-fluid  contact_div">
+        <div class="row" style="text-align:left">
+            <p>Your feedback and suggestions are welcome for topics for me to look into. Email me at
+                <a class="u-email" href="mailto:clarkke20@students.ecu.edu"> clarkke20@students.ecu.edu </a>
+            </p>
+            <br>
+            <p> or find me on LinkedIn and Twitter:
+            <div style="display:inline; margin-bottom: 15px;">
+
+                <a href="https://twitter.com/KClarkCode" target="_blank"><img src="/assets/images/social/tw.png"
+                        width="47px" hspace="18" vspace="0"></a>
+                <a href="https://www.linkedin.com/in/kelle-clark-b31731176/" target="_blank"><img
+                        src="/assets/images/social/li.png" width="47px" hspace="18" vspace="0"></a>
+            </div>
+            </p>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="second_terminal">
+
+        <div style="background-image:url(../assets/images/bkg.png);">
+
+            <div class="row" style="opacity: 40%;">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <a onclick="toggle_terminal()"><i class="fas fa-terminal"></i></a>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
+
+<script>
+    function toggle_terminal() {
+        var x = document.getElementById("first_terminal");
+        var y = document.getElementById("second_terminal");
+        if (x.style.display == "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "block"
+        };
+    }
+</script>
+
+</html>
