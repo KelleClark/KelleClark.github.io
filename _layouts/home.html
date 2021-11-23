@@ -2,17 +2,35 @@
 
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-</html>
 
-{% include head.html %}
+<head>
+    {% include head.html %}
 
+    <style>
+        .dot {
+            height: 25px;
+            width: 25px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        #second_terminal {
+            display: none;
+        }
+    </style>
+</head>
 
 <body>
     {% include header.html %}
 
     <div class="container-fluid" id="first_terminal">
+
         <div style="background-image:url(../assets/images/bkg.png);">
-            <br>
+            <span class="dot"></span>
+            <a onclick="toggle_terminal()"><span class="dot" style="background-color: yellow; id="
+                    minimize_terminal"></span></a>
+            <a href="/projects/"><span class="dot" style="background-color: green; id=" expand_terminal"></span></a>
         </div>
         <div class="row">
             {% include announcement.html %}
@@ -21,30 +39,54 @@
         <div class="row">
             {% include welcome_row.html %}
         </div>
-    </div>
-
-    <div>
-        <br>
-    </div>
-
-    <div class="container-fluid" style="margin-top: -60px" id="second_terminal">
-        <div style="background-image:url(../assets/images/bkg.png);">
-            <br>
-        </div>
         <div class=row>
             {% include contact_row.html %}
         </div>
-
-    </div>
     </div>
 
+    <div class="container-fluid" id="second_terminal">
 
+        <div style="background-image:url(../assets/images/bkg.png);">
 
+            <div class="row" style="opacity: 40%;">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <a onclick="toggle_terminal()"><i class="fas fa-terminal"></i></a>
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </div>
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<!-- Popper.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
 <script src="/assets/js/bootstrap.js"></script>
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
+
+<script>
+    function toggle_terminal() {
+        var x = document.getElementById("first_terminal");
+        var y = document.getElementById("second_terminal");
+        if (x.style.display == "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "block"
+        };
+    }
+</script>
 
 </html>

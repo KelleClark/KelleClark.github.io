@@ -2,3 +2,11 @@ zero:
  iframe: 0V08M1NcdJQ
  t1: "The Extrodinary Things Hubble Has Seen:"
  t2: "Hubble's 100 Greatest Images"
+one: 
+  iframe: https://drive.google.com/file/d/1Jyr0aIz2Hk0nU7-WI_87akojjq5WWX6E/preview
+  t1: "Minitalk on a Blockchain as a Database"
+  t2: "with a good dose of ellictic curve cryptography, watch on at least 1.5 speed!"
+two:
+  iframe: https://drive.google.com/file/d/1SiZscccFN0aN57b2m7XM1wAia4eITJFw/preview
+  t1: "Minitalk on using Data Mining Techniques for Intrusion Detection"
+  t2: "watch on at least 1.5 speed :)"

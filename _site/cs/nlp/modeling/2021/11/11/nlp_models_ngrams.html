@@ -8,15 +8,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLP: Creating Language Models using ngrams - Kelle Clark</title>
-    <!-- <link rel="stylesheet" type="text/css" href=" /assets/styles/main.css"> -->
+    <link rel="stylesheet" type="text/css" href=" /assets/styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+
     <style>
         header {
-            background-color: navajowhite;
             width: 100%;
             padding: 20px 0;
             margin: 0 0 0px 0;
+            background-color: darkcyan;
+
         }
 
         header h1:before {
@@ -38,9 +40,10 @@
         header h1 {
             font-size: 30px;
             line-height: 1.5;
-            margin: 0 0 0 -40px;
+            margin: 0 0 0 40px;
             font-weight: bold;
-            font-family: 'Arial Narrow', sans-serif;
+            font-family: serif;
+            font-style: italic;
             color: black;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
                 0 0 5px rgba(181, 232, 83, 0.1),
@@ -88,125 +91,92 @@
         }
 
         a {
-            color: rebeccapurple;
+            color: darkgoldenrod;
         }
 
         a-hover {
             color: chocolate;
         }
 
-        .sidenav {
-            height: 100%;
-            /* 100% Full-height */
-            width: 12%;
-            /* 0 width - change this with JavaScript */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Stay on top */
-            top: 0;
-            /* Stay at the top */
-            left: 0;
-            background-color: #111;
-            /* Black*/
-            overflow-x: hidden;
-            /* Disable horizontal scroll */
-            padding-top: 60px;
-            /* Place content 60px from the top */
-            transition: 0.5s;
-            /* 0.5 second transition effect to slide in the sidenav */
-        }
-
-        /* The navigation menu links */
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        /* When you mouse over the navigation links, change their color */
-        .sidenav a:hover {
-            color: darkblue;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
         #main {
-            transition: margin-left .5s;
-            padding: 100px;
-        }
-
-        .home {
-            margin: auto;
-            width: 60%;
-
-            padding: 10px;
-        }
-
-        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-            .sidenav a {
-                font-size: 18px;
-            }
+            height: 100%;
+            padding-left: 12%;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="sidenav" id="mySideNav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/">Home</a>
-        <a href="/projects/">Projects</a>
-        <a href="/documents/KelleClark.pdf">Resume</a>
-    </div>
-    <span onclick="openNav()">open
-
-        <div id="main" style="background-color:whitesmoke;" style="text-align: center;">
-
-            <div>
-
-                <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-    <header class="post-header">
-        <p class="post-title p-name" itemprop="name headline">NLP: Creating Language Models using ngrams</p>
-        <p class="post-meta">
-            <time class="dt-published" datetime="2021-11-11T00:00:00-05:00" itemprop="datePublished">
-                
-                Nov 11, 2021
-            </time>
+    <div class="container-fluid">
+        <div class="row" style="background-color: whitesmoke;">
+            <br>
+        </div>
+        <div class="row">
+            <style media="screen">
+    img {
+        position: relative;
+        top: -4.3px;
+    }
+</style>
+<header role="banner">
+    <div>
+        <div class="wrapper" style="padding: 0px;">
             
-        </p>
-    </header>
+            
+            <nav class="navbar navbar-dark navbar-expand-md ">
+                <a class="navbar-brand mr-auto" href="/">
 
-    <div class="post-content e-content" itemprop="articleBody">
-        <div>
-    <h4>Building Language Model with ngrams in Python</h4>
-</div>
+                    <h1> Kelle Clark </h1>
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/tie/">
+                                TIE
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/documents/KelleClark.pdf">
+                                Resume
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/projects/">
+                                Projects
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+        </div>
     </div>
 
+    <div id="main" style="background-color:whitesmoke;" style="text-align: center;">
+        <div>
+            <div>
+    <h4>Building Language Model with ngrams in Python</h4>
+    <p> Under Construction</p>
+</div>
+        </div>
 
-    
-
-    <a class="u-url" href="/cs/nlp/modeling/2021/11/11/nlp_models_ngrams.html" hidden></a>
-</article>
-            </div>
-
-            <div class="container-fluid" style="background-color:whitesmoke;">
-                <footer class="site-footer h-card">
+        <div class="container-fluid" style="background-color:whitesmoke;">
+            <footer class="site-footer h-card">
     <data class="u-url" href="/"></data>
     <div class="wrapper p-0">
         <div class="container-fluid">
@@ -231,10 +201,10 @@
         </div>
     </div>
 </footer>
-            </div>
-
         </div>
-    </span>
+
+    </div>
+
 
 
 </body>

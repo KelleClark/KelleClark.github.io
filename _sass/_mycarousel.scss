@@ -13,7 +13,7 @@
 // Carousel
 
 // scss-docs-start carousel-variables
-$carousel-control-color:             $black !default;
+$carousel-control-color:             blue !default;
 $carousel-control-width:             15% !default;
 $carousel-control-opacity:           .5 !default;
 $carousel-control-hover-opacity:     .9 !default;
@@ -190,11 +190,12 @@ $carousel-dark-control-icon-filter:  invert(1) grayscale(100) !default;
   // like a button) with data-bs-target for each slide your carousel holds.
   
   .carousel-indicators {
+    color: blue
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     justify-content: center;
     padding: 0;

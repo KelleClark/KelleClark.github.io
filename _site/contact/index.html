@@ -13,10 +13,11 @@
     
     <style>
         header {
-            background-color: navajowhite;
+            background-color: #bfa881;
             width: 100%;
             padding: 20px 0;
             margin: 0 0 0px 0;
+            color: black;
         }
 
         header h1:before {
@@ -27,7 +28,6 @@
         header h2 {
             font-size: 18px;
             font-weight: 300;
-            color: black;
         }
 
         header nav-link {
@@ -38,13 +38,11 @@
         header h1 {
             font-size: 30px;
             line-height: 1.5;
-            margin: 0 0 0 -40px;
+            margin: 0 0 0 40px;
             font-weight: bold;
             font-family: 'Arial Narrow', sans-serif;
             color: black;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-                0 0 5px rgba(181, 232, 83, 0.1),
-                0 0 10px rgba(181, 232, 83, 0.1);
+
             letter-spacing: -1px;
             -webkit-font-smoothing: antialiased;
 
@@ -57,7 +55,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: whitesmoke;
+            background-color: #fff0d6;
             /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
             height: 100vh;
             color: black;
@@ -73,83 +71,72 @@
 
         }
 
-
         .navbar-brand h1 {
             align-items: center;
         }
 
 
-        a-href {
-            color: white;
-        }
-
-        a-href-hover {
-            color: darkblue;
-        }
-
         a {
-            color: rebeccapurple;
+            color: #465368;
         }
 
         a-hover {
-            color: chocolate;
+            color: #465390;
         }
 
-        .sidenav {
-            height: 100%;
-            /* 100% Full-height */
-            width: 12%;
-            /* 0 width - change this with JavaScript */
+        a-href-hover {
+            color: #accaff;
+            ;
+        }
+
+
+        .content {
+            background-color: #fff0d6;
+            width: 100%;
+            display: flex;
+            padding: 40%;
+        }
+
+
+
+        #sidebar {
+            min-width: 150px;
             position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Stay on top */
-            top: 0;
-            /* Stay at the top */
             left: 0;
-            background-color: #111;
-            /* Black*/
-            overflow-x: hidden;
-            /* Disable horizontal scroll */
-            padding-top: 60px;
-            /* Place content 60px from the top */
-            transition: 0.5s;
-            /* 0.5 second transition effect to slide in the sidenav */
+            height: 100vh;
+            z-index: 999;
+            max-width: 250px;
+            min-height: 100vh;
+            background-color: #bfa881;
         }
 
-        /* The navigation menu links */
-        .sidenav a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
+        #sidebar.active {
+            margin-left: -250px;
         }
 
-        /* When you mouse over the navigation links, change their color */
-        .sidenav a:hover {
-            color: darkblue;
+
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #bfa881;
         }
 
-        .sidenav .closebtn {
+        #dismiss {
+            width: 35px;
+            height: 35px;
             position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
+            /* top right corner of the sidebar */
+            top: 10px;
+            right: 10px;
         }
 
-        #main {
-            transition: margin-left .5s;
-            padding: 100px;
-        }
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -250px;
+            }
 
-        .home {
-            margin: auto;
-            width: 60%;
-
-            padding: 10px;
+            #sidebar.active {
+                margin-left: 0;
+            }
         }
 
         /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -167,19 +154,39 @@
 
 <body>
 
-    <div class="sidenav" id="mySideNav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="/">Home</a>
-        <a href="/projects/">Projects</a>
-        <a href="/documents/KelleClark.pdf">Resume</a>
-    </div>
-    <span onclick="openNav()">open
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="sidebar-header">
+            <h3>Kelle Clark</h3>
+        </div>
+        <hr>
+        <ul class="list-unstyled components">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tie/" class="active">TIE</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/documents/KelleClark.pdf">Resume</a></li>
+        </ul>
+    </nav>
 
-        <div id="main" style="background-color:whitesmoke;" style="text-align: center;">
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid" style="background-color:#284253;">
+                <button type=" button" id="sidebarCollapse" class="btn btn-info" style="background-color: #bfa881;">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Sidebar</span>
+                </button>
 
+            </div>
+            <div class="container-fluid" style="background-color: #fff0d6; width:100%; height:500px;">
+                <img style="width: 100%; height:100%; object-fit: cover; " src="../assets/images/lightbulb2.png">
+            </div>
+
+        </nav>
+
+        <div>
             <div>
-
-                <div>
         <p>Not too active on social media. When I do post you can find me on LinkedIn and Twitter:</p>
         <br>
         <div style="display:inline; margin-bottom: 15px;">
@@ -197,10 +204,10 @@
         <h2>Contact me via e-mail</h2>
         <a class="u-email" href="mailto:clarkke20@students.ecu.edu">clarkke20@students.ecu.edu</a>
 </div>
-            </div>
+        </div>
 
-            <div class="container-fluid" style="background-color:whitesmoke;">
-                <footer class="site-footer h-card">
+        <div>
+            <footer class="site-footer h-card">
     <data class="u-url" href="/"></data>
     <div class="wrapper p-0">
         <div class="container-fluid">
@@ -225,26 +232,43 @@
         </div>
     </div>
 </footer>
-            </div>
-
         </div>
-    </span>
+    </div>
+
+
 
 
 </body>
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<!-- Popper.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
 <script src="/assets/js/bootstrap.js"></script>
-<script>
-    // using javascript to change styling of sidenav
-    function openNav() {
-        document.getElementById("mySideNav").style.width = "20%";
-    }
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+    integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+    crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+    crossorigin="anonymous"></script>
 
-    function closeNav() {
-        document.getElementById("mySideNav").style.width = "0%";
-    }
+<script>
+    $(document).ready(function () {
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            // hide sidebar
+            $('#sidebar').toggleClass('active');
+        });
+
+    });
 </script>
 
 </html>

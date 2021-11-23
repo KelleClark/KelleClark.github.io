@@ -13,10 +13,25 @@
 
     <style>
         header {
-            background-color: navajowhite;
+            background-color: #ccb48a;
             width: 100%;
-            padding: 20px 0;
+            padding: 10px 0;
             margin: 0 0 0px 0;
+        }
+
+        header h1 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 0 0 0 20px;
+            font-weight: bold;
+            font-family: 'Arial Narrow', sans-serif;
+            color: black;
+            letter-spacing: -1px;
+            -webkit-font-smoothing: antialiased;
+
+            @include media-max-width($container-max-width) {
+                margin-left: 0;
+            }
         }
 
         header h1:before {
@@ -35,29 +50,13 @@
             font-size: 16px;
         }
 
-        header h1 {
-            font-size: 30px;
-            line-height: 1.5;
-            margin: 0 0 0 -40px;
-            font-weight: bold;
-            font-family: 'Arial Narrow', sans-serif;
-            color: black;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-                0 0 5px rgba(181, 232, 83, 0.1),
-                0 0 10px rgba(181, 232, 83, 0.1);
-            letter-spacing: -1px;
-            -webkit-font-smoothing: antialiased;
 
-            @include media-max-width($container-max-width) {
-                margin-left: 0;
-            }
-        }
 
 
         body {
             margin: 0;
             padding: 0;
-            background-color: antiquewhite;
+            background-color: #fff0d6;
             /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
             height: 100vh;
             color: black;
@@ -70,7 +69,6 @@
 
         .navbar-dark .navbar-nav .nav-link {
             color: black;
-
         }
 
 
@@ -78,21 +76,20 @@
             align-items: center;
         }
 
+        a {
+            color: white;
+        }
+
+        a-hover {
+            color: #465368;
+        }
 
         a-href {
             color: white;
         }
 
         a-href-hover {
-            color: darkblue;
-        }
-
-        a {
-            color: green;
-        }
-
-        a-hover {
-            color: chocolate;
+            color: #accaff;
         }
     </style>
 </head>
@@ -106,61 +103,57 @@
 </style>
 <header role="banner">
     <div>
-
         <div class="wrapper" style="padding: 0px;">
             
             
             <nav class="navbar navbar-dark navbar-expand-md ">
-                <div class="container-fluid p-0">
-                    <a class="navbar-brand" href="/">
+                <a class="navbar-brand mr-auto" href="/">
 
-                        <h1> Kelle Clark </h1>
-                    </a>
+                    <h1> Kelle Clark </h1>
+                </a>
 
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                         
-                        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                            
-                            <li class="nav-item">
-                                <a  class="nav-link" 
-                                    href="/tie/">
-                                    TIE
-                                </a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a  class="nav-link" 
-                                    href="/documents/KelleClark.pdf">
-                                    Resume
-                                </a>
-                            </li>
-                            
-                            <li class="nav-item">
-                                <a  class="nav-link" 
-                                    href="/projects/">
-                                    Projects
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </div>
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/tie/">
+                                TIE
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/documents/KelleClark.pdf">
+                                Resume
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a  class="nav-link" 
+                                href="/projects/">
+                                Projects
+                            </a>
+                        </li>
+                        
+                    </ul>
                 </div>
             </nav>
         </div>
     </div>
 </header>
-    <div class="container-fluid" style="background-color: antiquewhite; width:100%; height:300px;">
+    <div class="container-fluid" style="background-color: #fff0d6; width:100%; height:300px;">
         <img style="object-fit: cover; width:100%; height:100%" src="../assets/images/boardwalk_birds.jpg">
     </div>
 
     </div>
-    <main class="page-content" style="background-color: antiquewhite;">
+    <main class="page-content" style="background-color: #fff0d6;">
         <div class="wrapper">
             <div class="home">
     
@@ -179,11 +172,11 @@
     
     <div class="card">
         <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-        <div class="card-header" style="background-color:peru;">
+        <div class="card-header" style="background-color:#284253;">
             <br>
         </div>
         <div class="card-body">
-            <h5 class="card-title" style="color:darkblue;">NLP/ngram_language_models</h5>
+            <h5 class="card-title" style="color:#284253;">NLP/ngram_language_models</h5>
             <p class="card-text">In this project, relative frequencies of ngrams (unigrams/bigrams/trigrams) are found in a training corpus. To fill in missing tokens (words) in the distribution, the language models are smoothed using linear and Laplacian methods. Given an input text, the model is used to predict the next word(s). This project uses an ipynb file making minimal use of nltk library.</p>
             <a href="https://github.com/KelleClark/CSCI6040Project1/blob/master/README.md" class="btn btn-dark">View Project</a>
         </div>
@@ -194,13 +187,28 @@
     
     <div class="card">
         <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-        <div class="card-header" style="background-color:peru;">
+        <div class="card-header" style="background-color:#284253;">
             <br>
         </div>
         <div class="card-body">
-            <h5 class="card-title" style="color:darkblue;">Blockchain Databases and Elliptic Curve Cryptography</h5>
+            <h5 class="card-title" style="color:#284253;">Blockchain Databases and Elliptic Curve Cryptography</h5>
             <p class="card-text">A brief overview of Blockchains used in Distributed Ledger Technology</p>
             <a href="https://docs.google.com/presentation/d/1S-8jVbpC_DShYWHXtDc4YDbb9toLLQEx/edit?usp=sharing&ouid=112123308449334229811&rtpof=true&sd=true" class="btn btn-dark">View Project</a>
+        </div>
+    </div>
+    <div>
+        <br>
+    </div>
+    
+    <div class="card">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-header" style="background-color:#284253;">
+            <br>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="color:#284253;">ASP.NET web app with SQL database</h5>
+            <p class="card-text">This project demonstrates the Software Development Life Cycle, SDLC, as our team used Visual Studios 2019 to build a C# ASP.NET web application with a SQL database. I enjoyed taking the lead in creating the use case/activity/sequence/class diagrams using Papyrus for the UML within Eclipse Mars, and I learned a lot from my team about the framework and and database. While our team selected the Model-View-Controller Architecture to use for the PeerEd package, by using the ASP.NET project, the solution incorporates both the model and controller  a service that could be used to search for and get user made educational videos for primary and secondary school. Our team envisioned the platform to be a educational version of YouTube.</p>
+            <a href="https://drive.google.com/file/d/1mvtV-AIOd4PECPYQDIZFodOW_OkVmg_r/view?usp=sharing" class="btn btn-dark">View Project</a>
         </div>
     </div>
     <div>
@@ -214,15 +222,16 @@
         <hr style="width: 2px; color: brown;">
         <div>
     <div id="typesofresources" class="carousel carousel-dark slide" data-bs-ride="carousel"
-        style="background-color: black; border-radius: 10px;">
+        style="background-color: black; border-radius: 10px; color: white">
         <div class="display-6 mt-4 py-0 px-3 ">
-            <h3 style=" font-size: 0.8em; font-weight: 500; color: white; text-align: left;">Interesting Videos
-                and Resources </h3>
+            <h3 style=" font-size: 0.8em; font-weight: 500; color: white; text-align: left;">My Demo Videos & Minitalks
+            </h3>
         </div>
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#typesofresources" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#typesofresources" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#typesofresources" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -234,7 +243,7 @@
                             class="d-block mx-auto mt-4" style="max-height: 400px;" alt="...">
                     </div>
                     <div class="col-md-4 p-3">
-                        <div style="width: 95%; height: 440px;">
+                        <div style="width: 95%; height: 100%;">
                             <h2 style="margin-bottom: 10px; font-weight: 700; padding-top: 20px;">Natural Language
                                 Processing</h2>
                             <h5 style="  text-align: justify; text-justify: inter-word;">Using a Python Interactive
@@ -248,21 +257,44 @@
                     </div>
                 </div>
             </div>
+
             <div class="carousel-item">
                 <div class="row mb-4">
-                    <div class="col-md-6 p-3" style="min-height: 300px;">
-                        <iframe width="80%" height="80%"
-                            src="https://www.youtube.com/embed/0V08M1NcdJQ"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen style="float: left;""></iframe>
+                    <div class="col-md-2 p-3">
+
                     </div>
-                    <div class=" col-md-6 p-3">
-                            <div>
-                                <h4 style="margin-bottom: 10px; font-weight: 500; 
-                                text-align: left">The Extrodinary Things Hubble Has Seen:</h4>
-                                <h5> Hubble's 100 Greatest Images </h5>
-                            </div>
+                    <div class="col-md-4 p-3" style="min-height: 300px;">
+                        <iframe src="https://drive.google.com/file/d/1Jyr0aIz2Hk0nU7-WI_87akojjq5WWX6E/preview" width=80% height=80% allow="autoplay"></iframe>
+                    </div>
+                    <div class=" col-md-4 p-3">
+                        <div>
+                            <h4 style="margin-bottom: 10px; font-weight: 500; 
+                                text-align: left">Minitalk on a Blockchain as a Database</h4>
+                            <h5> with a good dose of ellictic curve cryptography, watch on at least 1.5 speed! </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-3">
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row mb-4">
+                    <div class="col-md-2 p-3">
+
+                    </div>
+                    <div class="col-md-4 p-3" style="min-height: 300px;">
+                        <iframe src="https://drive.google.com/file/d/1SiZscccFN0aN57b2m7XM1wAia4eITJFw/preview" width=80% height=80% allow="autoplay"></iframe>
+                    </div>
+                    <div class=" col-md-4 p-3">
+                        <div>
+                            <h4 style="margin-bottom: 10px; font-weight: 500; 
+                                text-align: left">Minitalk on a Blockchain as a Database</h4>
+                            <h5> with a good dose of ellictic curve cryptography, watch on at least 1.5 speed! </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-3">
+
                     </div>
                 </div>
             </div>
@@ -282,7 +314,7 @@
 </div>
         </div>
 
-        <div class="container-fluid" style="background-color: antiquewhite;">
+        <div class="container-fluid" style="background-color: #fff0d6;">
             <footer class="site-footer h-card">
     <data class="u-url" href="/"></data>
     <div class="wrapper p-0">

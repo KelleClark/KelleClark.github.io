@@ -6,36 +6,32 @@
 </style>
 <header role="banner">
     <div>
-
         <div class="wrapper" style="padding: 0px;">
             {% assign default_paths = site.pages | map: "path" %}
             {% assign page_paths = site.header_pages | default:default_paths %}
             <nav class="navbar navbar-dark navbar-expand-md ">
-                <div class="container-fluid p-0">
-                    <a class="navbar-brand" href="/">
+                <a class="navbar-brand mr-auto" href="/">
 
-                        <h1> {{ site.title |escape}} </h1>
-                    </a>
+                    <h1> {{ site.title |escape}} </h1>
+                </a>
 
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        {% assign url = page.url|remove:{{site.url}} %}
-                        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                            {% for item in site.data.navbar %}
-                            <li class="nav-item">
-                                <a {%if url==item.link %}class="nav-link active" {%else %} class="nav-link" {%endif%}
-                                    href="{{ item.link }}">
-                                    {{ item.name }}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    {% assign url = page.url|remove:{{site.url}} %}
+                    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                        {% for item in site.data.navbar %}
+                        <li class="nav-item">
+                            <a {%if url==item.link %}class="nav-link active" {%else %} class="nav-link" {%endif%}
+                                href="{{ item.link }}">
+                                {{ item.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </nav>
         </div>

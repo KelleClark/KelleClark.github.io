@@ -8,10 +8,25 @@
     {% include head.html %}
     <style>
         header {
-            background-color: navajowhite;
+            background-color: #ccb48a;
             width: 100%;
-            padding: 20px 0;
+            padding: 10px 0;
             margin: 0 0 0px 0;
+        }
+
+        header h1 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 0 0 0 20px;
+            font-weight: bold;
+            font-family: 'Arial Narrow', sans-serif;
+            color: black;
+            letter-spacing: -1px;
+            -webkit-font-smoothing: antialiased;
+
+            @include media-max-width($container-max-width) {
+                margin-left: 0;
+            }
         }
 
         header h1:before {
@@ -30,29 +45,13 @@
             font-size: 16px;
         }
 
-        header h1 {
-            font-size: 30px;
-            line-height: 1.5;
-            margin: 0 0 0 -40px;
-            font-weight: bold;
-            font-family: 'Arial Narrow', sans-serif;
-            color: black;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-                0 0 5px rgba(181, 232, 83, 0.1),
-                0 0 10px rgba(181, 232, 83, 0.1);
-            letter-spacing: -1px;
-            -webkit-font-smoothing: antialiased;
 
-            @include media-max-width($container-max-width) {
-                margin-left: 0;
-            }
-        }
 
 
         body {
             margin: 0;
             padding: 0;
-            background-color: antiquewhite;
+            background-color: #fff0d6;
             /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
             height: 100vh;
             color: black;
@@ -65,7 +64,6 @@
 
         .navbar-dark .navbar-nav .nav-link {
             color: black;
-
         }
 
 
@@ -73,38 +71,37 @@
             align-items: center;
         }
 
+        a {
+            color: white;
+        }
+
+        a-hover {
+            color: #465368;
+        }
 
         a-href {
             color: white;
         }
 
         a-href-hover {
-            color: darkblue;
-        }
-
-        a {
-            color: green;
-        }
-
-        a-hover {
-            color: chocolate;
+            color: #accaff;
         }
     </style>
 </head>
 
 <body>
     {% include header.html %}
-    <div class="container-fluid" style="background-color: antiquewhite; width:100%; height:300px;">
+    <div class="container-fluid" style="background-color: #fff0d6; width:100%; height:300px;">
         <img style="object-fit: cover; width:100%; height:100%" src="../assets/images/boardwalk_birds.jpg">
     </div>
 
     </div>
-    <main class="page-content" style="background-color: antiquewhite;">
+    <main class="page-content" style="background-color: #fff0d6;">
         <div class="wrapper">
             {{ content }}
         </div>
 
-        <div class="container-fluid" style="background-color: antiquewhite;">
+        <div class="container-fluid" style="background-color: #fff0d6;">
             {% include footer.html %}
         </div>
     </main>
