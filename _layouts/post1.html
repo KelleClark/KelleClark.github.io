@@ -5,23 +5,28 @@
 </html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ " /assets/styles/main.css" | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {% if jekyll.environment == 'production' and site.google_analytics %}
-    {% include google-analytics.html %}
-
-    {% endif %}
-
+    {% include head.html %}
     <style>
         header {
+            background-color: #ccb48a;
             width: 100%;
-            padding: 20px 0;
+            padding: 10px 0;
             margin: 0 0 0px 0;
-            background-color: darkcyan;
+        }
 
+        header h1 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 0 0 0 20px;
+            font-weight: bold;
+            font-family: 'Arial Narrow', sans-serif;
+            color: black;
+            letter-spacing: -1px;
+            -webkit-font-smoothing: antialiased;
+
+            @include media-max-width($container-max-width) {
+                margin-left: 0;
+            }
         }
 
         header h1:before {
@@ -40,30 +45,13 @@
             font-size: 16px;
         }
 
-        header h1 {
-            font-size: 30px;
-            line-height: 1.5;
-            margin: 0 0 0 40px;
-            font-weight: bold;
-            font-family: serif;
-            font-style: italic;
-            color: black;
-            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-                0 0 5px rgba(181, 232, 83, 0.1),
-                0 0 10px rgba(181, 232, 83, 0.1);
-            letter-spacing: -1px;
-            -webkit-font-smoothing: antialiased;
 
-            @include media-max-width($container-max-width) {
-                margin-left: 0;
-            }
-        }
 
 
         body {
             margin: 0;
             padding: 0;
-            background-color: whitesmoke;
+            background-color: #fff0d6;
             /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
             height: 100vh;
             color: black;
@@ -76,7 +64,6 @@
 
         .navbar-dark .navbar-nav .nav-link {
             color: black;
-
         }
 
 
@@ -84,43 +71,26 @@
             align-items: center;
         }
 
-
-        a-href {
-            color: white;
-        }
-
-        a-href-hover {
-            color: darkblue;
-        }
-
         a {
-            color: darkgoldenrod;
+            color: #465368;
         }
 
         a-hover {
-            color: chocolate;
-        }
-
-        #main {
-            height: 100%;
-            padding-left: 12%;
+            color: #465390;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row" style="background-color: whitesmoke;">
-            <br>
-        </div>
-        <div class="row">
-            {% include header.html %}
-        </div>
-    </div>
+    {% include header.html %}
 
-    <div id="main" style="background-color:whitesmoke;" style="text-align: center;">
-        <div>
-            {{ content }}
+
+    <div id="container-fluid" style="text-align: left;">
+        <div class="row">
+            <div class="col-md-2" style="background-color: blanchedalmond"></div>
+            <div class="col-md-8" style="background-color:#fff0d6; text-indent: 5%;">{{ content }}</div>
+            <div class="col-md-2" style="background-color:blanchedalmond"></div>
+
         </div>
 
         <div class="container-fluid" style="background-color:whitesmoke;">
@@ -136,15 +106,6 @@
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
 <script src="/assets/js/bootstrap.js"></script>
-<script>
-    // using javascript to change styling of sidenav
-    function openNav() {
-        document.getElementById("mySideNav").style.width = "20%";
-    }
 
-    function closeNav() {
-        document.getElementById("mySideNav").style.width = "0%";
-    }
-</script>
 
 </html>

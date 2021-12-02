@@ -1,0 +1,167 @@
+---
+layout: post1
+date: December 02, 2021
+title: "The Value of Good Practices with Version Control"
+categories:
+---
+
+<div>
+    <h2 style="text-align: center; color:#284253;">Really Commiting to Version Control</h2>
+
+
+    <p> If all is well with the universe, every engineer experiences being a member of a great team at
+        one point in their career. A team
+        where everyone is vested and contributes. At this point, the old way of doing most of
+        the work on your own to then upload and share
+        with others before the presentation is no longer acceptable. It is time for version control.</p>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-6">
+                <p style="text-align:center;">Every School Project Team</p>
+                <a href="https://imgflip.com/i/20ab5f"><img src="https://i.imgflip.com/20ab5f.jpg"
+                        title="made at imgflip.com" /></a>
+            </div>
+            <div class="col-md-6">
+                <p style="text-align:center;">OMG, This Team is AWESOME!</p>
+                <a><img src="../../../assets/images/avengers_team2.png"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <p> Most professional software development teams use some subset of
+        <a href="https://www.agilealliance.org">agile</a> and <a href="https://www.devops.com">devops</a>
+        principles as part of their workflow protocol and governance because
+        the systems they are creating WILL be the result of the entire team's
+        efforts. Collaborate with others (or going solo) on a large scale project takes more than
+        programming muscle. There is a real need to be strategic, have a plan and
+        use the plan. Enter Version Control.
+    </p>
+
+    <p>I learned many of the following points while in school and
+        first starting to use Gitlab with the lack of self-control of a kid in a candy store.
+        I've since moved that entangled repository of branches to GitHub with a decision to make: scrap
+        the whole thing and begin fresh or try to trim it up so that I can build on it.
+        While there is no question that having the ability to roll back to a previously working code base with version
+        control will save a team's backside at least once, the real kicker is using version control to
+        efficiently build a project others will be able to maintain and that can easily be
+        scaled. Hopefully these
+        suggestions for using version control will help you out as you build on a team of one or many amazing
+        engineers.
+    </p>
+    <ul style="list-style-type: none;">
+        <li>
+            <h4 style="text-align: center; color:#284253;">REALLY USE THE VERSION CONTROL</h4>
+            <p>
+                After choosing a version control system, it is essential to make sure that every teammember really uses
+                the system. I know,
+                this seems so basic, but the magnitude of fear of the unknown with git that is experienced is directly
+                proportional to the number people who will
+                know a mistake has been made. The benefits of enabling efficient, informed, simulaneous collaboration
+                far outway the time investment to use one of the many options out there. "Git"-ting everyone to commit
+                to committing their changes at least once a day is highly recommended. A friendly way to wade into using
+                git is to use a programming environment
+                like Visual Studio Code that has an extension for
+                version control. This can make pushing and pulling
+                changes virtually painfree. The remaining list items elaborate on what I mean by "really using" such a
+                framework. `
+            </p>
+        </li>
+
+        <li>
+            <h4 style="text-align: center; color:#284253;">USE A ReadMe FILE</h4>
+            <p>
+                Documentation can feel like a waste of time, unless you have had the pleasure of inheriting a project
+                that did not include documentation. I am not talking about anything that would require a tl;dr summary.
+                Your goal could be for any capable non-team developer to be able to spend a day
+                reading through the repository and be able to scale/maintain as necessary. There are many templates
+                available
+                and here is one that I really like: <a href="https://github.com/othneildrew/Best-README-Template">Best
+                    README
+                    Template</a>.</p>
+            <p>A ReadMe goes a long way in the process of maintaining or scaling a project. Make sure
+                that you include a good description of what
+                is included in the repository and the requirements for someone to use/interact/contribute to it. As the
+                project
+                developes, update this information. New versions for dependencies can create a little havic, but
+                there will be some hope for a project's long life if you share with others a snapshot of the environment
+                where the project is known to have worked.
+            </p>
+        </li>
+        <li>
+            <h4 style="text-align: center; color:#284253;">ONE MAIN BRANCH</h4>
+            <p> Within your project's repository, have a main branch designated for the components of the project that
+                are "good to go". By this
+                I mean, this branch of code has tested, documented, clean code that is, or could be, deployed for the
+                end
+                users. You could also have a secondary branch where any new changes are pushed to so that simply
+                redirecting
+                traffic with a load balancer to this second branch will enable the changes to be accessed by end users
+                with virtually no down
+                time.
+                (blue-green deployement).
+            </p>
+        </li>
+        <li>
+            <h4 style="text-align: center; color:#284253;">USE #feature-fix BRANCHES</h4>
+            <p>
+                Have a list of features/fixes that the team is working on. You could use a kanban like framework,
+                where issues are organized and progress is tracked. Once an issue is tagged and assigned, then those
+                working on that issue checkout a new branch off the master (or green branch if applicable) under the
+                same
+                tag. Here is a nice article outlining some of the current naming conventions when creating branches:
+                <a href="https://codingsight.com/git-branching-naming-convention-best-practices/">"Git Branching Naming
+                    Convention Best Practices."</a>
+            </p>
+
+            <p> It is crucial that changes in one branch should only relate to the issue specified for this
+                branch so that
+                conflicts with other changes in the code are minimal. Also, never work on
+                someone else's issue because you have a "great" idea without asking them first. You will be very
+                unpopular if you do.
+            </p>
+        </li>
+        <li>
+            <h4 style="text-align: center; color:#284253;">KEEP YOUR BRANCH UP TO DATE</h4>
+            <p>
+                When working locally, pull from the master and merge any changes often AND push local changes to the
+                remote branch so that
+                others on your team can see what changes you are making. Do not keep
+                happily programming all day without pushing your changes. I learned the value of pushing my updates at
+                least twice a day when I am really making progress. Resolving conflicts is no fun for anyone.
+            </p>
+        </li>
+        <li>
+            <h4 style="text-align: center; color:#284253;"> KEEP YOUR CHANNEL OPEN</h4>
+            <p>
+                Even if you are remote, maybe especially if you are remote, make an effort to communicate with the
+                whole
+                team on your progress and issues. Please do not have an ego, meaning ask for help when you
+                have hit a wall and give help without in a constructive way. I enjoy the flow of sending quick
+                messages
+                or emojis, but I still enjoy hearing another human voice to remind me that my teammates are not just
+                AI
+                bots.
+                So, if a teammate is
+                posting
+                their progress or
+                has made a code review/pull request, take
+                the time to actually read the comments they included and give them some genuine feedback.
+            </p>
+        </li>
+        <li>
+            <h4 style="text-align: center; color:#284253;">COMMIT NO SMELLY CODE</h4>
+            <p>
+                Try to clean up your code and update the status of your issues before code reviews. It is similar
+                to company coming over. You may code (live) anyway you like, but tidy up before someone else comes to
+                visit.
+            </p>
+        </li>
+    </ul>
+    I am positive that anyone who scanned this list can think of one or two more items to add, and I would love to hear
+    what you
+    have to teach me.
+
+</div>
