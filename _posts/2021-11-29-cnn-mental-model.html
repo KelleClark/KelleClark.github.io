@@ -1,0 +1,239 @@
+---
+layout: post1
+date: Janurary 6, 2022
+title: "Convolution Neural Networks Image Processing"
+categories: cs nlp models
+---
+
+<div>
+    <h2 style="text-align: center; color:#284253;">A Mental Model of Neural Networks
+    </h2>
+
+
+    <p> Our brains are darn good at making sense of large amounts of input, and as we face the need to make informed
+        decisions using lakes and warehouses filled to
+        capacity with data, we look to computer science and mathematics to
+        for solutions. Methods for quickly identifying patterns, similarities and outliers that will give us some
+        measurable
+        confidence in decisions regarding health, safety and economic growth are needed.
+        Here is where we pan to Artificial Intelligence. It seems reasonable that scientists would attempt to emulate
+        the
+        design and
+        processes of the brain using methods of machine learning and logic. Eventually, we need to have technology that
+        not only
+        can learn from us and training data but rather become independent, go out and experience all of the data, sort
+        through it for us and tell us what we
+        need to know. For now, it seems that one algorithm, a
+        Convolution Neural Network or CNN, is working overtime to extend the
+        capabilities of machines to see
+        and
+        reason
+        about the world as a human brain would. Here are some quick points:</p>
+    <div>
+        <ol>
+            <li>
+                <p>A <b>neural network</b> refers to a sequence of instructions that are
+                    programmed
+                    and carried out by layers of processors
+                    that try to mimic
+                    the brain in dealing with huge collections of sensory data in order to generate more informed
+                    responses to that
+                    information.</p>
+            </li>
+            <li><b>Sequence of Learning</b>
+                <p>There are feed-forward neural networks, where the process moves information from a previous
+                    layer forward to
+                    the next layer, and recursive neural networks that orchestrate the recieving and sending of signals
+                    allowing for
+                    information to
+                    be passed back to a previous layer in a cyclical learning pattern. </p>
+            </li>
+            <li><b>Convolution Layer</b>
+                <p>A convolution neural network,
+                    (CNN), is neural network that has an added convolution layer used before the input layer of the
+                    neural
+                    network. The convolution
+                    is necessary in order to improve the performance of the algorithm on large batches of information.
+                </p>
+            </li>
+        </ol>
+    </div>
+
+    <p>
+        This blog entry will be part one of a non-technical overview of CNNs as I recount what I have gleaned so far
+        from visiting the amazing resources.
+    <ul>
+        <li>
+            <a href="https://playground.tensorflow.org/">A safe playground to visualize neurons and filters,
+                https://playground.tensorflow.org/</a>
+        </li>
+        <li>
+            <a href="https://playground.tensorflow.org/">A playground allowing you to see effects of applying kernel to
+                an image as part of a convolution,
+                https://playground.tensorflow.org/</a>
+        </li>
+        <li>
+            <a href="https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e">A guide to CNN use in Natural Language
+                Processing (NLP) and instruction to build a python program accessing the Keras API,
+                https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e</a>
+        </li>
+        <li>
+            <a href="http://neuralnetworksanddeeplearning.com/index.html"> Well written e-book that carefully develops
+                neural networks and walks through a small python program and libraries: random and numpy.
+                http://neuralnetworksanddeeplearning.com/index.html</a>.
+        </li>
+        <li>
+            <a href="https://fairyonice.github.io/Low-and-High-pass-filtering-experiments.html">A good rescourse on Low
+                an High pass filters in the frequency domain,
+                https://fairyonice.github.io/Low-and-High-pass-filtering-experiments.html</a>
+        </li>
+        <li>
+            <a href="https://www.pnas.org/content/117/48/30033">A recent colloqium paper focusing on the effectiveness
+                of deep learning
+                neural networks that is on my "nightstand", https://www.pnas.org/content/117/48/30033 </a>
+        </li>
+
+    </ul>
+    </p>
+
+
+    <p> The basic idea of a neural network is to take an input stream of numeric data and generate a rule for
+        cataloging
+        the
+        information that
+        demonstrates an understanding from the learning process, i.e. when presented with new data the
+        rule will allow the classification of characteristics of the signal "close" to what a human would give.
+        There
+        are many different designs for neural networks used with the intent to allow machines to see, hear
+        and commmunicate like humans and this entry focuses on the use of CNNs as applied to Image Processing because
+        the pre-process steps are
+        a little more intuitive than those associated with say Natural Language Processing.
+        The models take inspiration from modalities of human learning, i.e. learning information using a waterfall like
+        design with the next concept building on the previous concept after it has been mastered or a cyclical learning
+        approach that allows concepts to be revisited.
+        As with every automated process, attention is given to requirements of speed, effectiveness and storage.
+    </p>
+
+
+    <p> To model the process, we start with the data itself (remember I am focusing on the image processing use case).
+        The wavelengths
+        constructing an image at one point in time will
+        be
+        represented by a 2D array, think an n x m matrix, where n and m are positive integers.
+        For black and white images, the entries are 0s and 1s and for gray scale images,
+        the values are between 0 and 1 inclusive. Color images require a much larger number of possible
+        combinations of values and an increase in channels to store these values. Specifically, using RGB notation:
+        (red, green, blue),
+        we have three primary coponents using at minimum 8 bits per component. These values are scaled to the
+        to [0,1] and operations are applied to each of these three channels seperately. This discrete representation of
+        the image
+        will be an approximation to the real image and lies in our preset spatial domain...more or less
+        sampling
+        the
+        image at
+        regular intervals from the top left of the image to the bottom right. </p>
+
+    <p> Ok, I said that this would be a high level description, so here it goes. Our process assumes that there
+        is a large collection of data to be analyzed, thus the need to automate the process, and there is a metric
+        agreed upon to measure the performance of the process. There are two approaches in machine
+        learning applied to collections of data: supervised and unsupervised methods. With supervised learming
+        techniques, images need to be
+        selected from the collection as a training set, labeled and then fed into the algorithm to generate our
+        association that will be tested with the remaining images. There are
+        certainly some use cases for language or image processing where this is appropriate. As mentioned in <a
+            href="https://www.researchgate.net/publication/265729668_Unsupervised_Classification_of_Images_A_Review">
+            Unsupervised
+            Image Classification: A Review</a>, if the goal is for
+        AI to consume
+        data indiscriminately from the web and to discover patterns as a part of rule generation, an unsupervised method
+        allows for the opportunity to
+        discover these patterns and
+        principle components with appropriate weights.
+        In either case, some pre-processing of these huge arrays has been found to be necessary in order to improve
+        efficiency and accuracy.</p>
+
+    <p>A convolution is such a pre-processing layer and
+        a binary function between the image matrix and a matrix known as the kernel that outputs either a matrix of
+        the same size as the image or slightly smaller (dimensionality reduction). We can say that this function filters
+        the image
+        with the idea to highlight aspects of the image that we are interested in. Filters are used all
+        of
+        the time
+        in our social media and advertising to soften or sharpen images. So keeping this high level, To be honest, I
+        think of this process in
+        terms of a
+        word
+        search puzzle. My method is to start at the top left corner and look at a block of letters and then
+        slide my
+        gaze
+        to the right until the end of the puzzle. Then I pick back up in an overlapping block of the very
+        first
+        one on
+        the
+        left side of the puzzle and continue ot move left to right down the puzzle. In the case of the
+        convolution
+        operation,
+        a kernel is a smaller matrix that will operate on blocks of the image matrix (in the spatial domain)
+        and
+        then
+        the convolution layer is finished off with a pooling operator. After the convolution layers are
+        complete, the
+        information
+        will need to be taken from the spatial domain to the frequency domain by a (Fast) Fourier
+        Transformation, FFT,
+        to make the computations easier, and once we are done with the filtering in the frequency domain,
+        find
+        the
+        inverse
+        FFT to return to the spatial domain. Here is a great blog on filtering with convolution in the
+        spatial
+        domain
+        and
+        using FFTs to enable the use of high and low pass filters on images.
+    </p>
+    <p>
+        With or without a convolution layer, when applying a feed-forward nerual network the ultimate goal
+        to
+        create a
+        rule for comprehending important features of the image, we have to take a
+        second to
+        think about what we might consider relavent characteristics in the image. At first, it might seem
+        like a
+        great
+        idea to
+        look for specific shapes like a face or a chair. However, this process is very limiting to the
+        learning
+        process
+        since we
+        would like to generate a way of looking at never-seen-before images that could be very different
+        from
+        what we
+        would use as a
+        predetermined definition of a chair or a face. There are too many variations we would need train on
+        to
+        be
+        practical and effective.
+        So instead, we will filter images by the patterns that are common to "similar" objects and that are
+        invariant
+        to the
+        orientation of the
+        object in an image. To this point, a neural network consists of one or
+        more layers of perceptrons (or more complex sigmoid
+        neurons). Each perceptron will recieve information as a vector and the output of each
+        perceptron's
+        result is then combined and
+        sent to the next layer of perceptrons. More precisely, each layer consists of applying step functions using
+        weights and a bias in the case of perceptrons, sigmoid function when
+        using sigmoid neurons, in parallel. Weights can be learned in this process by
+        using a metric that measures correctness as compared to the known answer, with the sigmoid neurons offering more
+        flexibility using small changes in
+        input to result in small changes in the output. The
+        metric can
+        then be used to give a cost assessed when a decision is incorrect and to adjust the process with small
+        tweaks
+        to
+        gradually
+        get better (lower cost). There can be hidden layers of perceptrons sandwiched between the input layer and the
+        one perceptron in the outer
+        layer depending on the desired complexity of patterns to be discorvered and time.
+    </p>
