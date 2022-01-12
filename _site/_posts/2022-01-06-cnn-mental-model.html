@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Convolution Neural Networks Image Processing - Kelle Clark</title>
+<title>Convolution Neural Networks with a focus on Image Processing - Kelle Clark</title>
 <link rel="stylesheet" type="text/css" href=" /assets/styles/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -146,96 +146,114 @@
         <div class="row">
             <div class="col-md-2" style="background-color: blanchedalmond"></div>
             <div class="col-md-8" style="background-color:#fff0d6; text-indent: 5%;"><div>
-    <h2 style="text-align: center; color:#284253;">A Mental Model of Neural Networks
+    <h2 style="text-align: center; color:#284253;">A Mental Model for Convolution Neural Networks with a focus on Image
+        Processing
     </h2>
 
 
-    <p> Our brains are darn good at making sense of large amounts of input, and as we face the need to make informed
-        decisions using lakes and warehouses filled to
-        capacity with data, we look to computer science and mathematics to
-        for solutions. Methods for quickly identifying patterns, similarities and outliers that will give us some
-        measurable
-        confidence in decisions regarding health, safety and economic growth are needed.
-        Here is where we pan to Artificial Intelligence. It seems reasonable that scientists would attempt to emulate
-        the
-        design and
-        processes of the brain using methods of machine learning and logic. Eventually, we need to have technology that
-        not only
-        can learn from us and training data but rather become independent, go out and experience all of the data, sort
-        through it for us and tell us what we
-        need to know. For now, it seems that one algorithm, a
-        Convolution Neural Network or CNN, is working overtime to extend the
-        capabilities of machines to see
-        and
-        reason
-        about the world as a human brain would. Here are some quick points:</p>
+    <p> There is a need to process lakes and warehouses filled with data in order to make critical descisions
+        about business, heath, politics and the list goes on. The solution requires systems that can seek out
+        information effectively and quickly tell us what we need to know,
+        not just what we want to know. </p>
+
+    <p></p>Neural network architecture and machine learning algorithms are used to enable machines
+    applying simple funtions to sift through the data to identify patterns. The associations learned can then
+    be interpreted and utilized. Here are the key definitions:</p>
+
     <div>
         <ol>
             <li>
-                <p>A <b>neural network</b> refers to a sequence of instructions that are
+                <p><b>A Neural Network</b> refers to a sequence of instructions that are
                     programmed
-                    and carried out by layers of processors
-                    that try to mimic
-                    the brain in dealing with huge collections of sensory data in order to generate more informed
-                    responses to that
-                    information.</p>
+                    and carried out by processors
+                    that execute step functions or sigmoid functions organized in layers, with layers communicating
+                    combined results to another layer either linearly or recursively with the goal of recognizing
+                    patterns
+                    and building rules for catagorizing/classifying information. </p>
             </li>
-            <li><b>Sequence of Learning</b>
-                <p>There are feed-forward neural networks, where the process moves information from a previous
+            <li>
+                <p> Neural networks have an input layer and an output layer, but the architechture of
+                    neural networks can include hidden layers, allowing for more in-depth, <b>deep learning</b>,
+                    discorvery. The
+                    information flow between these layers can be
+                    linear or cyclical. <it> Feed-forward neural networks</it> move information from
+                    a previous
                     layer forward to
-                    the next layer, and recursive neural networks that orchestrate the recieving and sending of signals
+                    the next layer, and <it>recursive neural networks</it> orchestrate the recieving and sending of
+                    signals
                     allowing for
                     information to
                     be passed back to a previous layer in a cyclical learning pattern. </p>
             </li>
-            <li><b>Convolution Layer</b>
-                <p>A convolution neural network,
-                    (CNN), is neural network that has an added convolution layer used before the input layer of the
+            <li>
+                <p>A Convolution Neural Network,
+                    (CNN), is neural network that has an added <b>convolution layer</b> used before the input layer of
+                    the
                     neural
-                    network. The convolution
-                    is necessary in order to improve the performance of the algorithm on large batches of information.
+                    network. In general, the convolution improves the performance of the algorithm on large batches of
+                    information.
                 </p>
             </li>
         </ol>
     </div>
 
+    <p> Since our brains are darn good at making sense of large
+        amounts of
+        input, it stands
+        to reason that Computer Scientists and Mathematicians attempt to automate solutions to these tasks taking
+        inspiration from biological nueral networks. In some use cases, the goal is for "humans" to already know the
+        patterns that they are interested in or that exist within the
+        data and then train a system to recognize these patterns. In the context of a system, there are known signatures
+        of past attacks or bugs within similar systems. As part of security, it is essential that we efficiently
+        monitor code and
+        transactions
+        for these signatures. However, attackers are creative and think of novel ways
+        to breach
+        security of a system including exploiting bugs in code. An ideal network security monitoring system would also
+        be able to learn the difference
+        between
+        expected patterns and
+        an outlying one or even identify uninteded behavior in code. A neural network could be used to identify
+        unexpected behaviors of the system by using as
+        input random states, an action and resulting behavior to generate an association for classifying outlying
+        behavior. This rule could then be
+        used to monitor the states and behaviors of the system in real time. </p>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-7">
+                <a><img src="/../../../assets/images/Pac-Man_Ghost_AI.png"></a>
+            </div>
+            <div class="col-md-5">
+                <p style="text-align:left;">Could we Fuzz Pac-Man Using a Neural Network to find the AI bug?
+                    https://strategywiki.org/wiki/Pac-Man/Tips </p>
+            </div>
+        </div>
+    </div>
+
+    The need for a system to learn, or at least the
+    ablility for task
+    specific learning, involves
+    narrow Artificial Intelligence, AI, or more specifically on the
+    methods of Machine
+    Learning, ML. As with
+    all technologies in AI that would allow processors to exhibit intelligence, machine learning is a collection of
+    approaches that synthesize the learning process of humans in machines.
+    </p>
+    <p>
+        For now, it seems that one algorithm, a
+        Convolution Neural Network or CNN, is working overtime to extend the
+        capabilities of machines to see
+        and
+        reason
+        about the world as a human brain would. Here are some quick points:</p>
+
+
+
     <p>
         This blog entry will be part one of a non-technical overview of CNNs as I recount what I have gleaned so far
-        from visiting the amazing resources.
-    <ul>
-        <li>
-            <a href="https://playground.tensorflow.org/">A safe playground to visualize neurons and filters,
-                https://playground.tensorflow.org/</a>
-        </li>
-        <li>
-            <a href="https://playground.tensorflow.org/">A playground allowing you to see effects of applying kernel to
-                an image as part of a convolution,
-                https://playground.tensorflow.org/</a>
-        </li>
-        <li>
-            <a href="https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e">A guide to CNN use in Natural Language
-                Processing (NLP) and instruction to build a python program accessing the Keras API,
-                https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e</a>
-        </li>
-        <li>
-            <a href="http://neuralnetworksanddeeplearning.com/index.html"> Well written e-book that carefully develops
-                neural networks and walks through a small python program and libraries: random and numpy.
-                http://neuralnetworksanddeeplearning.com/index.html</a>.
-        </li>
-        <li>
-            <a href="https://fairyonice.github.io/Low-and-High-pass-filtering-experiments.html">A good rescourse on Low
-                an High pass filters in the frequency domain,
-                https://fairyonice.github.io/Low-and-High-pass-filtering-experiments.html</a>
-        </li>
-        <li>
-            <a href="https://www.pnas.org/content/117/48/30033">A recent colloqium paper focusing on the effectiveness
-                of deep learning
-                neural networks that is on my "nightstand", https://www.pnas.org/content/117/48/30033 </a>
-        </li>
-
-    </ul>
+        from visiting the amazing resources I list at the end.
     </p>
-
 
     <p> The basic idea of a neural network is to take an input stream of numeric data and generate a rule for
         cataloging
@@ -251,35 +269,47 @@
         The models take inspiration from modalities of human learning, i.e. learning information using a waterfall like
         design with the next concept building on the previous concept after it has been mastered or a cyclical learning
         approach that allows concepts to be revisited.
-        As with every automated process, attention is given to requirements of speed, effectiveness and storage.
+        As with every automated process, the desing of a CNN must address the requirements of speed, effectiveness and
+        storage.
     </p>
-
-
-    <p> To model the process, we start with the data itself (remember I am focusing on the image processing use case).
-        The wavelengths
-        constructing an image at one point in time will
-        be
-        represented by a 2D array, think an n x m matrix, where n and m are positive integers.
-        For black and white images, the entries are 0s and 1s and for gray scale images,
-        the values are between 0 and 1 inclusive. Color images require a much larger number of possible
-        combinations of values and an increase in channels to store these values. Specifically, using RGB notation:
-        (red, green, blue),
-        we have three primary coponents using at minimum 8 bits per component. These values are scaled to the
-        to [0,1] and operations are applied to each of these three channels seperately. This discrete representation of
-        the image
-        will be an approximation to the real image and lies in our preset spatial domain...more or less
-        sampling
-        the
-        image at
-        regular intervals from the top left of the image to the bottom right. </p>
-
-    <p> Ok, I said that this would be a high level description, so here it goes. Our process assumes that there
+    <p>Ok, I said that this would be a high level description, so here it goes. The discussion assumes that there
         is a large collection of data to be analyzed, thus the need to automate the process, and there is a metric
-        agreed upon to measure the performance of the process. There are two approaches in machine
-        learning applied to collections of data: supervised and unsupervised methods. With supervised learming
+        agreed upon to measure the performance.</p>
+
+    <p> To model the process, we start with the data itself (focusing on the image processing use case).
+        The wavelengths
+        constructing an image at one point in time is
+        sampled at
+        regular intervals from the top left of the boundary of the image to the bottom right and the measures will
+        be recorded in a 2D array, think an n x m matrix, where n and m are positive integers.
+        This discrete representation of
+        the image
+        will be an approximation to the real image and lies in our preset spatial domain.
+        For black and white images, the entries are 0s and 1s and for grayscale images,
+        the values are between 0 and 1 inclusive. The representation of color images
+        requires a much larger number of
+        possible
+        combinations of values and a storage increase in the number of channels needed from the one channel used for
+        black and white or grayscale images. Specifically, using RGB notation:
+        (red, green, blue),
+        we have three primary coponents using at minimum 8 bits per component. These values are typically scaled
+        to [0,1] and operations are applied to each of these three channels seperately. </p>
+
+    <p> Now that we have an idea of how to visualize the represention of one type of data, we begin the overview of how
+        to
+        create a set of steps that could allow a machine to seemingly make decisions. There are three approaches in
+        machine
+        learning applied to collections of data: supervised, unsupervised and semi-supervised methods. With supervised
+        learming
         techniques, images need to be
         selected from the collection as a training set, labeled and then fed into the algorithm to generate our
-        association that will be tested with the remaining images. There are
+        association. The association can then be assessed with the remaining images. This approach comes with some
+        upfront
+        costs of curating a set of data that has already been classified/catagorized in order to measure the recall and
+        precision
+        of the algorithm. Once trained though, the algorithm can then tweaked with less effort to learn on other data
+        sets.
+        There are
         certainly some use cases for language or image processing where this is appropriate. As mentioned in <a
             href="https://www.researchgate.net/publication/265729668_Unsupervised_Classification_of_Images_A_Review">
             Unsupervised
@@ -288,13 +318,29 @@
         data indiscriminately from the web and to discover patterns as a part of rule generation, an unsupervised method
         allows for the opportunity to
         discover these patterns and
-        principle components with appropriate weights.
-        In either case, some pre-processing of these huge arrays has been found to be necessary in order to improve
-        efficiency and accuracy.</p>
+        principle components with appropriate weights. With unsupervised methods, there is no need for a training set
+        but
+        the requirements on time, space and computing power are more restrictive. As expected, semi-supervised methods
+        combine these two approaches
+        in attempt
+        to strike a balance between the costs and benefits of the two.
+    </p>
 
-    <p>A convolution is such a pre-processing layer and
-        a binary function between the image matrix and a matrix known as the kernel that outputs either a matrix of
-        the same size as the image or slightly smaller (dimensionality reduction). We can say that this function filters
+    <p>In any of ML methods used with data, in most cases one piece of information translates to a huge array and a some
+        pre-processing
+        of these representations is necessary in order to
+        improve
+        efficiency and accuracy. Flashback to our idea to create a mental model, a presenter will begin a talk by
+        introducing
+        a few key concepts in their
+        slide deck to help the audience prepare for the later slides that will develop these concepts. A convolution is
+        such a pre-processing
+        layer, with the purpose of identifying key components. A convolution is traditionally a
+        binary function taking as input the data matrix and a helper matrix known as the kernel. The operation between
+        these two
+        matrices is either a matrix of
+        the same size as the image or slightly smaller (dimensionality reduction) dependent on the choice of kernel. We
+        can say that this function filters
         the image
         with the idea to highlight aspects of the image that we are interested in. Filters are used all
         of
@@ -376,7 +422,51 @@
         get better (lower cost). There can be hidden layers of perceptrons sandwiched between the input layer and the
         one perceptron in the outer
         layer depending on the desired complexity of patterns to be discorvered and time.
-    </p></div>
+    </p>
+
+    <p style="text-align:center"> References:
+
+    <ol>
+
+        <li>
+            A playground to visualize neurons and filters,<a href="https://playground.tensorflow.org/">
+                https://playground.tensorflow.org/</a>
+        </li>
+        <li>
+            Another playground allowing you to see effects of applying kernel to
+            an image as part of a convolution,<a href="https://playground.tensorflow.org/">
+                https://playground.tensorflow.org/</a>
+        </li>
+        <li>
+            A guide to CNN use in Natural Language
+            Processing (NLP) and instruction to build a python program accessing the Keras API,<a
+                href="https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e">
+                https://towardsdatascience.com/nlp-with-cnns-a6aa743bdc1e</a>
+        </li>
+        <li>
+            Well written e-book that carefully develops
+            neural networks and walks through a small python program and libraries: random and numpy.<a
+                href="http://neuralnetworksanddeeplearning.com/index.html">
+                http://neuralnetworksanddeeplearning.com/index.html</a>.
+        </li>
+        <li>
+            A good rescourse on Low and High pass filters in the frequency domain,<a
+                href="https://fairyonice.github.io/Low-and-High-pass-filtering-experiments.html">
+                https://fairyonice.github.io/Low-and-High-pass-filtering-experiments.html</a>
+        </li>
+        <li>
+            A recent colloqium paper focusing on the effectiveness
+            of deep learning
+            neural networks that is on my "nightstand",<a href="https://www.pnas.org/content/117/48/30033">
+                https://www.pnas.org/content/117/48/30033 </a>
+        </li>
+        <li> An animation of convolutions and the canonical image of Lena Forsén
+            <a>https://www.opto-e.com/basics/kernel</a>
+        </li>
+
+    </ol>
+    </p>
+</div></div>
             <div class="col-md-2" style="background-color:blanchedalmond"></div>
 
         </div>
