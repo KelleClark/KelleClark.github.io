@@ -7,55 +7,138 @@
     {% include head.html %}
 
     <style>
-        .dot {
-            height: 25px;
-            width: 25px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        #second_terminal {
+        #about_me {
             display: none;
         }
+
+        header {
+            background-color: #ccb48a;
+            width: 100%;
+            padding: 10px 0;
+            margin: 0 0 0px 0;
+        }
+
+        header h1 {
+            font-size: 30px;
+            line-height: 1.5;
+            margin: 0 0 0 20px;
+            font-weight: bold;
+            font-family: 'Arial Narrow', sans-serif;
+            color: black;
+            letter-spacing: -1px;
+            -webkit-font-smoothing: antialiased;
+
+            @include media-max-width($container-max-width) {
+                margin-left: 0;
+            }
+        }
+
+        header h1:before {
+            content: "  ";
+            font-size: 30px;
+        }
+
+        header h2 {
+            font-size: 18px;
+            font-weight: 300;
+            color: black;
+        }
+
+        header nav-link {
+            color: black;
+            font-size: 16px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff0d6;
+            /* background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%); */
+            height: 100vh;
+            color: black;
+            font-size: 24px;
+            line-height: 1.5;
+            font-family: 'Arial Narrow', sans-serif;
+            /* font-family: Inconsolata, monospace;
+            font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace; */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: black;
+        }
+
+
+        .navbar-brand h1 {
+            align-items: center;
+        }
+
+        a {
+            color: white;
+        }
+
+        a-hover {
+            color: #465368;
+        }
+
+        a-href {
+            color: white;
+        }
+
+        a-href-hover {
+            color: #accaff;
+        }
+
+        #circle_done {
+            width: 100%;
+            height: 35px;
+            position: absolute;
+            /* top right corner of the sidebar */
+            top: 10px;
+            right: 10px;
+        }
     </style>
+
 </head>
 
 <body>
     {% include header.html %}
-
-    <div class="container-fluid" id="first_terminal">
-
-        <div style="background-image:url(../assets/images/bkg.png);">
-            <span class="dot"></span>
-            <a onclick="toggle_terminal()"><span class="dot" style="background-color: yellow; id="
-                    minimize_terminal"></span></a>
-            <a href="/projects/"><span class="dot" style="background-color: green; id=" expand_terminal"></span></a>
-        </div>
-        <div class="row">
-            {% include announcement.html %}
-        </div>
-
-        <div class="row">
-            {% include welcome_row.html %}
-        </div>
-        <div class=row>
-            {% include contact_row.html %}
-        </div>
+    <div class="container-fluid" style="background-color: #fff0d6; width:100%; height:300px;">
+        <img style="object-fit: cover; width:100%; height:100%" src="../assets/images/boardwalk_birds.jpg">
     </div>
 
-    <div class="container-fluid" id="second_terminal">
+    </div>
+    <main class="page-content" style="background-color: #fff0d6;">
+        <div class="wrapper">
 
-        <div style="background-image:url(../assets/images/bkg.png);">
 
-            <div class="row" style="opacity: 40%;">
-                <div class="col-md-5"></div>
-                <div class="col-md-2">
-                    <a onclick="toggle_terminal()"><i class="fas fa-terminal"></i></a>
+            <div class="container-fluid" id="first_terminal" style="background-color:blanchedalmond;">
+
+                <div class="row" style="background-color:blanchedalmond;">
+
+                    <a onclick="toggle_terminal()"><span><i class="fas fa-address-card"></i></span></a>
                 </div>
-                <div class="col-md-5"></div>
+                <div class="row" style="background-color:blanchedalmond;">
+                    {% include welcome_row.html %}
+                </div>
             </div>
+
+            <div class="container-fluid" id="about_me" style="background-color: blanchedalmond;">
+
+                <div class="row" style="background-color: #465368;">
+                    <br>
+
+                    <a onclick="toggle_terminal()"><span><i class="fas fa-times-circle"></i></span></a>
+                </div>
+
+                <div class="row">
+                    {% include contact_row.html %}
+                </div>
+            </div>
+
         </div>
+
+
+    </main>
 
 </body>
 
@@ -78,12 +161,12 @@
 <script>
     function toggle_terminal() {
         var x = document.getElementById("first_terminal");
-        var y = document.getElementById("second_terminal");
+        var y = document.getElementById("about_me");
         if (x.style.display == "none") {
-            x.style.display = "block";
+            // x.style.display = "block";
             y.style.display = "none";
         } else {
-            x.style.display = "none";
+            // x.style.display = "none";
             y.style.display = "block"
         };
     }

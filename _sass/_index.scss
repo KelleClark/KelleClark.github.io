@@ -21,7 +21,7 @@
   color: $conifer;
 
   &:hover {
-    color: #0062FF ;
+    color: #284253 ;
   }
 }
 
@@ -29,7 +29,7 @@
   align-items: center;
 
   &:hover {
-    color: #0062FF ;
+    color: #284253 ;
   }
 }
 
@@ -69,7 +69,7 @@ a {
 a-href  {
   color: $conifer;
   &:hover {
-    color: #0062FF ;
+    color: #284253 ;
     text-decoration: none;
   }
 }
@@ -98,6 +98,15 @@ a-href  {
   position: relative;
 }
 
+#about_me {
+  height: 100%; 
+  width: 80%;
+  position: static;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
             
