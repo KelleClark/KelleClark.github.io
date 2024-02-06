@@ -10,3 +10,7 @@ two:
   iframe: https://drive.google.com/file/d/1SiZscccFN0aN57b2m7XM1wAia4eITJFw/preview
   t1: "Minitalk on using Data Mining Techniques for Intrusion Detection"
   t2: "watch on at least 1.5 speed :)"
+three:
+  iframe: https://drive.google.com/file/d/14SfiL7FNxUdGY5QMdOKQ2cvlK7mrJ84K/view?usp=drive_link
+  t1: "Minitalk on Information Retrieval, Tokenization and Ranking Schemes"
+  t2: "A group project in SDLC course where our project leveraged Google's Firestore for NoSQL DB and Edaname API"
